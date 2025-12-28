@@ -1,0 +1,136 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: radial-gradient(circle at top, #1e293b, #020617);
+  color: white;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+/* GLOBAL CONTAINER */
+.section {
+  width: 100%;
+  max-width: 1100px;
+  margin: auto;
+  padding: 90px 25px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 40px;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 50px;
+  border-bottom: 1px solid rgba(255,255,255,.15);
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #7dd3fc;
+}
+
+.navbar nav a {
+  margin-left: 25px;
+  color: #cdd9ff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.navbar nav a:hover {
+  color: white;
+}
+
+/* HERO SECTION */
+.hero {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.hero h1 {
+  font-size: 50px;
+  max-width: 900px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  max-width: 850px;
+  color: #b8c2ff;
+  font-size: 20px;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+/* BUTTON */
+.button {
+  display: inline-block;
+  background: #38bdf8;
+  padding: 14px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.button:hover {
+  background: #0891b2;
+  color: white;
+}
+
+/* PROJECT CARDS */
+.projects {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+.project-card {
+  background: rgba(255,255,255,.08);
+  padding: 25px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,.1);
+  transition: 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255,255,255,.12);
+}
+
+.project-card h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  color: #c9d2ff;
+  line-height: 1.6;
+}
+
+/* CONTACT */
+.contact {
+  text-align: center;
+}
+
+.note {
+  color: #9ca3af;
+  margin-top: 15px;
+}
+
