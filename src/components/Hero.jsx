@@ -23,7 +23,7 @@ export default function Hero() {
           <h1 className="text-4xl lg:text-6xl font-extrabold leading-[1.15] mb-8 pb-1 bg-gradient-to-r from-sky-300 via-white to-sky-200 bg-clip-text text-transparent">
             Building Mobile Apps  
             That Support, Empower  
-            & Give A Voice 💙
+            & Give A Voice To Everyone 💙
           </h1>
 
           <p className="text-xl text-blue-100 leading-loose mb-10 max-w-2xl">
