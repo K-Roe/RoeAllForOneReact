@@ -15,9 +15,9 @@ export default function Contact() {
         </span>
 
         {/* Title */}
-        <h2 className="text-4xl lg:text-6xl font-extrabold mb-6 bg-gradient-to-r from-sky-300 via-white to-sky-200 bg-clip-text text-transparent animate-fade">
-          Let’s Work Together
-        </h2>
+      <h2 className="text-4xl lg:text-6xl font-extrabold mb-6 pb-2 bg-gradient-to-r from-sky-300 via-white to-sky-200 bg-clip-text text-transparent animate-fade">
+        Let’s Work Together
+      </h2>
 
         {/* Text */}
         <p className="text-blue-100 text-lg lg:text-xl max-w-3xl mx-auto leading-relaxed mb-10">
@@ -39,23 +39,27 @@ export default function Contact() {
 
             {/* Email */}
             <a
-              href="mailto:YOUR_EMAIL_HERE"
+              href="mailto:Karlroe919286@msn.com"
               className="px-7 py-3 rounded-lg font-semibold bg-sky-400 text-black hover:bg-sky-500 transition shadow-xl shadow-sky-400/30"
             >
               📧 Email Me
             </a>
 
             {/* LinkedIn placeholder */}
-            <a
-              href="#"
-              className="px-7 py-3 rounded-lg font-semibold border border-white/50 hover:bg-white/10 transition shadow-lg shadow-white/10"
-            >
-              🔗 LinkedIn
-            </a>
+           <a
+            href="https://www.linkedin.com/in/karl-aboltins-roe-249b0417b"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-7 py-3 rounded-lg font-semibold border border-white/50 hover:bg-white/10 transition shadow-lg shadow-white/10"
+          >
+            🔗 LinkedIn
+          </a>
 
             {/* GitHub placeholder */}
             <a
-              href="#"
+            href="https://github.com/K-Roe"
+            target="_blank"
+            rel="noopener noreferrer"
               className="px-7 py-3 rounded-lg font-semibold border border-white/50 hover:bg-white/10 transition shadow-lg shadow-white/10"
             >
               🧑‍💻 GitHub

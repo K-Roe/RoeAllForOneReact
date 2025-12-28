@@ -13,7 +13,7 @@ export default function CaseStudyBrightSpeak() {
           ⭐ Case Study
         </span>
 
-        <h1 className="text-5xl lg:text-6xl font-extrabold mb-6 bg-gradient-to-r from-sky-300 via-white to-sky-200 bg-clip-text text-transparent">
+        <h1 className="text-5xl lg:text-6xl font-extrabold mb-6 pb-2 bg-gradient-to-r from-sky-300 via-white to-sky-200 bg-clip-text text-transparent">
           BrightSpeak
         </h1>
 

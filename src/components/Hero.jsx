@@ -20,7 +20,7 @@ export default function Hero() {
             🌈 Autism & SEN Focused App Developer
           </span>
 
-          <h1 className="text-4xl lg:text-6xl font-extrabold leading-snug mb-8 bg-gradient-to-r from-sky-300 via-white to-sky-200 bg-clip-text text-transparent">
+          <h1 className="text-4xl lg:text-6xl font-extrabold leading-[1.15] mb-8 pb-1 bg-gradient-to-r from-sky-300 via-white to-sky-200 bg-clip-text text-transparent">
             Building Mobile Apps  
             That Support, Empower  
             & Give A Voice 💙

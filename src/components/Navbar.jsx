@@ -5,18 +5,9 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [dropdown, setDropdown] = useState(false);
   const [active, setActive] = useState("");
-  const [dark, setDark] = useState(true);
 
   const location = useLocation();
 
-  // Dark mode toggle
-  useEffect(() => {
-    if (dark) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-  }, [dark]);
 
   // Scroll active highlight
   useEffect(() => {
@@ -56,11 +47,11 @@ export default function Navbar() {
 
           <span className="bg-gradient-to-r from-sky-300 via-white to-sky-200 
           bg-clip-text text-transparent">
-            Karl
+            Karl Aboltins-Roe
           </span>
 
           <span className="text-blue-100 dark:text-blue-200">
-            — App Developer
+            — Roe All For One
           </span>
         </Link>
 
@@ -130,14 +121,6 @@ export default function Navbar() {
           </Link>
         )}
 
-        {/* DARK MODE TOGGLE */}
-        <button
-          onClick={() => setDark(!dark)}
-          className="hidden md:block text-xl ml-4"
-        >
-          {dark ? "🌙" : "☀️"}
-        </button>
-
         {/* MOBILE MENU BUTTON */}
         <button
           onClick={() => setOpen(!open)}
@@ -167,13 +150,6 @@ export default function Navbar() {
           >
             BrightSpeak Case Study
           </Link>
-
-          <button
-            onClick={() => setDark(!dark)}
-            className="mt-3 text-lg"
-          >
-            {dark ? "🌙 Dark Mode On" : "☀️ Light Mode"}
-          </button>
         </div>
       )}
     </header>

@@ -27,9 +27,9 @@ export default function Projects() {
             ⭐ My Work
           </span>
 
-          <h2 className="text-4xl lg:text-6xl font-extrabold mb-6 bg-gradient-to-r from-sky-300 via-white to-sky-200 bg-clip-text text-transparent">
-            Featured Projects
-          </h2>
+        <h2 className="text-4xl lg:text-6xl font-extrabold mb-6 pb-2 bg-gradient-to-r from-sky-300 via-white to-sky-200 bg-clip-text text-transparent">
+          Featured Projects
+        </h2>
 
           <p className="text-blue-100 text-lg lg:text-xl max-w-3xl mx-auto leading-relaxed">
             Apps crafted with care, accessibility and real-world impact.
