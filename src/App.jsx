@@ -6,6 +6,7 @@ import Hero from "./components/Hero";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import CaseStudyBrightSpeak from "./pages/CaseStudyBrightSpeak";
+import CaseStudyBrightBuddy from "./pages/CaseStudyBrightBuddy";
 
 export default function App() {
   return (
@@ -29,6 +30,10 @@ export default function App() {
           <Route
             path="/case-study/brightspeak"
             element={<CaseStudyBrightSpeak />}
+          />
+           <Route
+            path="/case-study/brightBuddy"
+            element={<CaseStudyBrightBuddy />}
           />
         </Routes>
       </div>

@@ -2,14 +2,20 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import Modal from "../components/Modal";
 
-
+/* BrightSpeak Screens */
 import screen1 from "../assets/brightspeak.jpg";
 import screen2 from "../assets/brightspeak2.jpg";
 import screen3 from "../assets/brightspeak3.jpg";
 import screen4 from "../assets/brightspeak4.jpg";
 
+/* BrightBuddy Screens */
+import bb1 from "../assets/brightbuddy1.png";
+import bb2 from "../assets/brightbuddy2.png";
+import bb3 from "../assets/brightbuddy3.png";
+
 export default function Projects() {
   const [openBrightSpeak, setOpenBrightSpeak] = useState(false);
+  const [openBrightBuddy, setOpenBrightBuddy] = useState(false);
 
   return (
     <section
@@ -27,9 +33,9 @@ export default function Projects() {
             ⭐ My Work
           </span>
 
-        <h2 className="text-4xl lg:text-6xl font-extrabold mb-6 pb-2 bg-gradient-to-r from-sky-300 via-white to-sky-200 bg-clip-text text-transparent">
-          Featured Projects
-        </h2>
+          <h2 className="text-4xl lg:text-6xl font-extrabold mb-6 pb-2 bg-gradient-to-r from-sky-300 via-white to-sky-200 bg-clip-text text-transparent">
+            Featured Projects
+          </h2>
 
           <p className="text-blue-100 text-lg lg:text-xl max-w-3xl mx-auto leading-relaxed">
             Apps crafted with care, accessibility and real-world impact.
@@ -56,7 +62,7 @@ export default function Projects() {
 
             {/* Screens */}
             <div className="flex gap-3 mb-6">
-              {[screen1, screen2, screen3].map((img, i) => (
+              {[screen1, screen2, screen3, screen4].map((img, i) => (
                 <img
                   key={i}
                   src={img}
@@ -83,29 +89,48 @@ export default function Projects() {
             </div>
           </div>
 
-          {/* ROUTINE BUILDER */}
+          {/* BRIGHTBUDDY */}
           <div className="group relative bg-white/10 border border-white/20 rounded-2xl p-8 shadow-xl hover:scale-[1.02] transition">
             <div className="absolute -top-5 left-6 px-4 py-2 bg-pink-400 text-black rounded-full text-sm font-semibold shadow-xl">
-              In Development
+              New App
             </div>
 
             <h3 className="text-2xl font-bold mb-3 text-pink-300">
-              Routine Builder
+              BrightBuddy
             </h3>
 
             <p className="text-blue-100 leading-relaxed mb-6">
-              Routine support app to help SEN children feel confident through structure.
+              A calm support app to help autistic children with routines,
+              emotions and confidence.
             </p>
 
-            <div className="h-36 flex items-center justify-center bg-white/5 border border-white/10 rounded-xl mb-6">
-              <p className="text-blue-200 opacity-70">
-                Screenshots Coming Soon…
-              </p>
+            {/* Screens */}
+            <div className="flex gap-3 mb-6">
+              {[bb1, bb2, bb3].map((img, i) => (
+                <img
+                  key={i}
+                  src={img}
+                  className="w-1/3 h-36 object-cover rounded-xl border border-white/20 shadow-lg"
+                />
+              ))}
             </div>
 
-            <button className="px-4 py-2 border border-white/40 rounded-lg font-semibold hover:bg-white/10 transition">
-              Follow Development
-            </button>
+            {/* Buttons */}
+            <div className="flex gap-3">
+              <button
+                onClick={() => setOpenBrightBuddy(true)}
+                className="px-4 py-2 bg-pink-400 text-black rounded-lg font-semibold hover:bg-pink-500 transition"
+              >
+                Learn More
+              </button>
+
+              <Link
+                to="/case-study/brightbuddy"
+                className="px-4 py-2 border border-white/40 rounded-lg font-semibold hover:bg-white/10 transition"
+              >
+                Case Study
+              </Link>
+            </div>
           </div>
 
           {/* COMING SOON */}
@@ -134,7 +159,9 @@ export default function Projects() {
         </div>
       </div>
 
-      {/* POPUP CONTENT */}
+      {/* ===================== POPUPS ===================== */}
+
+      {/* BrightSpeak Modal */}
       <Modal open={openBrightSpeak} onClose={() => setOpenBrightSpeak(false)}>
         <h2 className="text-3xl font-bold mb-3 text-sky-300">BrightSpeak</h2>
 
@@ -156,6 +183,33 @@ export default function Projects() {
         <Link
           to="/case-study/brightspeak"
           className="px-5 py-3 bg-sky-400 text-black rounded-lg font-semibold hover:bg-sky-500 transition"
+        >
+          View Full Case Study
+        </Link>
+      </Modal>
+
+      {/* BrightBuddy Modal */}
+      <Modal open={openBrightBuddy} onClose={() => setOpenBrightBuddy(false)}>
+        <h2 className="text-3xl font-bold mb-3 text-pink-300">BrightBuddy</h2>
+
+        <p className="text-blue-100 leading-relaxed mb-6">
+          BrightBuddy helps autistic children feel calmer, more confident and supported
+          using gentle visuals, routine helpers and emotional reassurance tools.
+        </p>
+
+        <div className="flex gap-3 mb-6">
+          {[bb1, bb2, bb3].map((img, i) => (
+            <img
+              key={i}
+              src={img}
+              className="w-1/3 h-40 object-cover rounded-xl border border-white/20"
+            />
+          ))}
+        </div>
+
+        <Link
+          to="/case-study/brightbuddy"
+          className="px-5 py-3 bg-pink-400 text-black rounded-lg font-semibold hover:bg-pink-500 transition"
         >
           View Full Case Study
         </Link>

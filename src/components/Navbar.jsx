@@ -102,6 +102,14 @@ export default function Navbar() {
                     BrightSpeak
                   </Link>
 
+                  <Link
+                    onClick={() => setDropdown(false)}
+                    to="/case-study/brightBuddy"
+                    className="hover:text-sky-300"
+                  >
+                    BrightBuddy
+                  </Link>
+
                   <p className="opacity-60">More coming soon…</p>
                 </div>
               )}
