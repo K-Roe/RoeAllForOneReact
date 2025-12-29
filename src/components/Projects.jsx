@@ -92,7 +92,7 @@ export default function Projects() {
           {/* BRIGHTBUDDY */}
           <div className="group relative bg-white/10 border border-white/20 rounded-2xl p-8 shadow-xl hover:scale-[1.02] transition">
             <div className="absolute -top-5 left-6 px-4 py-2 bg-pink-400 text-black rounded-full text-sm font-semibold shadow-xl">
-              New App
+              In Development
             </div>
 
             <h3 className="text-2xl font-bold mb-3 text-pink-300">
