@@ -54,7 +54,7 @@ export default function Navbar() {
             className="bg-gradient-to-r from-sky-300 via-white to-sky-200 
           bg-clip-text text-transparent"
           >
-            Karl Aboltins-Roe
+            BrightSen Apps
           </span>
         </Link>
 

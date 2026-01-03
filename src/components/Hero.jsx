@@ -3,6 +3,8 @@ import screen1 from "../assets/brightspeak.jpg";
 import screen2 from "../assets/brightspeak2.jpg";
 import screen3 from "../assets/brightspeak3.jpg";
 import screen4 from "../assets/brightspeak4.jpg";
+import logo from "../assets/brightsenapps.png"; 
+
 
 export default function Hero() {
   return (
@@ -16,6 +18,15 @@ export default function Hero() {
 
         {/* LEFT TEXT */}
         <div className="animate-fade">
+
+        <div className="inline-flex items-center justify-center mb-10 rounded-2xl bg-white/90 backdrop-blur-md px-6 py-4 shadow-xl shadow-sky-500/20">
+      <img
+        src={logo}
+        alt="BrightSEN Apps"
+        className="w-40 lg:w-48"
+      />
+    </div>
+
           <span className="inline-block mb-6 px-6 py-3 rounded-full text-sm border border-white/30 bg-white/10 text-blue-100 tracking-wide shadow-xl shadow-sky-400/20">
             🌈 Autism & SEN Focused App Developer
           </span>
