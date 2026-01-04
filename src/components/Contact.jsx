@@ -39,7 +39,7 @@ export default function Contact() {
 
             {/* Email */}
             <a
-              href="mailto:Karlroe919286@msn.com"
+              href="mailto:brightsenapps@brightsenapps.com"
               className="px-7 py-3 rounded-lg font-semibold bg-sky-400 text-black hover:bg-sky-500 transition shadow-xl shadow-sky-400/30"
             >
               📧 Email Me
@@ -64,6 +64,18 @@ export default function Contact() {
             >
               🧑‍💻 GitHub
             </a>
+
+              {/* Instagram placeholder */}
+              <a
+              href="https://www.instagram.com/brightsenapps/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-7 py-3 rounded-lg font-semibold border border-white/50 hover:bg-white/10 transition shadow-lg shadow-white/10"
+            >
+              📸 Instagram
+            </a>
+
+            
           </div>
 
           <p className="text-blue-200 opacity-70 mt-6">
