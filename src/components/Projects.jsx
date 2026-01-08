@@ -59,6 +59,18 @@ export default function Projects() {
               A communication app helping non-verbal autistic children
               express emotions and needs using visual tools.
             </p>
+            <a
+              href="https://play.google.com/store/apps/details?id=com.roe.brightSpeak"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block mb-6 hover:scale-105 transition-transform drop-shadow-[0_0_20px_rgba(56,189,248,0.35)]"
+            >
+              <img
+                src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+                alt="Get it on Google Play"
+                className="h-14"
+              />
+            </a>
 
             {/* Screens */}
             <div className="flex gap-3 mb-6">
