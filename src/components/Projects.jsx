@@ -59,18 +59,36 @@ export default function Projects() {
               A communication app helping non-verbal autistic children
               express emotions and needs using visual tools.
             </p>
-            <a
-              href="https://play.google.com/store/apps/details?id=com.roe.brightSpeak"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block mb-6 hover:scale-105 transition-transform drop-shadow-[0_0_20px_rgba(56,189,248,0.35)]"
-            >
-              <img
-                src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
-                alt="Get it on Google Play"
-                className="h-14"
-              />
-            </a>
+            <div className="flex gap-4 items-center">
+              {/* Google Play */}
+              <a
+                href="https://play.google.com/store/apps/details?id=com.roe.brightSpeak"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:scale-105 transition-transform"
+              >
+                <img
+                  src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+                  alt="Get it on Google Play"
+                  className="h-14"
+                />
+              </a>
+
+              {/* App Store */}
+              <a
+                href="https://apps.apple.com/gb/app/bright-speak/id6758393898"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:scale-105 transition-transform"
+              >
+                <img
+                  src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-gb?size=250x83"
+                  alt="Download on the App Store"
+                  className="h-10"
+                />
+              </a>
+            </div>
+
 
             {/* Screens */}
             <div className="flex gap-3 mb-6">
