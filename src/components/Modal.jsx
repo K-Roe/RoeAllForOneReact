@@ -2,23 +2,27 @@ export default function Modal({ open, onClose, children }) {
   if (!open) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex justify-center items-center">
-      {/* Overlay */}
-      <div
-        className="absolute inset-0 bg-black/70 backdrop-blur-sm"
+    <div
+      className="fixed inset-0 z-[100] flex items-center justify-center p-4"
+      role="dialog"
+      aria-modal="true"
+    >
+      <button
+        type="button"
+        className="absolute inset-0 bg-ink/80 backdrop-blur-md"
+        aria-label="Close"
         onClick={onClose}
-      ></div>
-
-      {/* Modal */}
-      <div className="relative bg-white/10 border border-white/20 rounded-2xl p-8 max-w-2xl w-[95%] text-white shadow-2xl animate-fade">
+      />
+      <div className="relative max-h-[90vh] w-full max-w-2xl overflow-y-auto rounded-3xl border border-white/10 bg-ink-card/95 p-8 text-frost shadow-2xl backdrop-blur-xl animate-fade">
         <button
-          className="absolute top-3 right-4 text-xl hover:text-red-400"
+          type="button"
+          className="absolute right-4 top-4 rounded-lg px-2 py-1 text-lg text-mist transition hover:bg-white/10 hover:text-frost"
           onClick={onClose}
+          aria-label="Close dialog"
         >
-          ✖
+          ✕
         </button>
-
-        {children}
+        <div className="pr-6">{children}</div>
       </div>
     </div>
   );

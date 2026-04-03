@@ -1,14 +1,12 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import Modal from "../components/Modal";
+import Modal from "./Modal";
 
-/* BrightSpeak Screens */
 import screen1 from "../assets/brightspeak.jpg";
 import screen2 from "../assets/brightspeak2.jpg";
 import screen3 from "../assets/brightspeak3.jpg";
 import screen4 from "../assets/brightspeak4.jpg";
 
-/* BrightBuddy Screens */
 import bb1 from "../assets/brightbuddy1.png";
 import bb2 from "../assets/brightbuddy2.png";
 import bb3 from "../assets/brightbuddy3.png";
@@ -20,47 +18,40 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="relative py-24 px-6 lg:px-20 text-white overflow-hidden"
+      className="relative scroll-mt-28 py-24 text-frost lg:px-20"
     >
-      {/* Background soft glow */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-sky-900/10 to-transparent pointer-events-none"></div>
+      <div
+        className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-brand-sky/5 to-transparent"
+        aria-hidden
+      />
 
-      <div className="max-w-7xl mx-auto">
-
-        {/* TITLE */}
-        <div className="text-center mb-16 animate-fade">
-          <span className="inline-block mb-4 px-5 py-2 rounded-full text-sm border border-white/30 bg-white/10 text-blue-100">
-            ⭐ My Work
-          </span>
-
-          <h2 className="text-4xl lg:text-6xl font-extrabold mb-6 pb-2 bg-gradient-to-r from-sky-300 via-white to-sky-200 bg-clip-text text-transparent">
-            Featured Projects
+      <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-0">
+        <div className="mb-16 max-w-3xl animate-fade">
+          <span className="eyebrow text-brand-sky">Portfolio</span>
+          <h2 className="headline mt-5 text-4xl sm:text-5xl lg:text-6xl">
+            <span className="gradient-text">SEN app work</span>
           </h2>
-
-          <p className="text-blue-100 text-lg lg:text-xl max-w-3xl mx-auto leading-relaxed">
-            Apps crafted with care, accessibility and real-world impact.
+          <p className="mt-6 text-lg leading-relaxed text-mist">
+            Products built for emotional safety, clarity and everyday impact —
+            the same standards I bring when I design your website.
           </p>
         </div>
 
-        {/* GRID */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-
-          {/* BRIGHTSPEAK */}
-          <div className="group relative bg-white/10 border border-white/20 rounded-2xl p-8 shadow-xl hover:scale-[1.02] transition">
-            <div className="absolute -top-5 left-6 px-4 py-2 bg-sky-400 text-black rounded-full text-sm font-semibold shadow-xl">
-              Flagship App
-            </div>
-
-            <h3 className="text-2xl font-bold mb-3 text-sky-300">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <article className="surface surface-hover group relative flex flex-col overflow-hidden p-8">
+            <div className="absolute -right-6 -top-6 size-28 rounded-full bg-brand-sky/15 blur-2xl transition group-hover:bg-brand-sky/25" />
+            <span className="relative mb-4 inline-flex w-fit rounded-full bg-brand-sky/20 px-3 py-1 text-xs font-bold uppercase tracking-wide text-brand-sky">
+              Flagship
+            </span>
+            <h3 className="relative font-display text-2xl font-bold text-frost">
               BrightSpeak
             </h3>
-
-            <p className="text-blue-100 leading-relaxed mb-6">
-              A communication app helping non-verbal autistic children
-              express emotions and needs using visual tools.
+            <p className="relative mt-3 flex-1 text-mist leading-relaxed">
+              Communication support for non-verbal autistic children — visual
+              tools, calm UI, real empathy in the details.
             </p>
-            <div className="flex gap-4 items-center">
-              {/* Google Play */}
+
+            <div className="relative mt-6 flex flex-wrap items-center gap-3">
               <a
                 href="https://play.google.com/store/apps/details?id=com.roe.brightSpeak"
                 target="_blank"
@@ -70,11 +61,9 @@ export default function Projects() {
                 <img
                   src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
                   alt="Get it on Google Play"
-                  className="h-14"
+                  className="h-12"
                 />
               </a>
-
-              {/* App Store */}
               <a
                 href="https://apps.apple.com/gb/app/bright-speak/id6758393898"
                 target="_blank"
@@ -84,164 +73,156 @@ export default function Projects() {
                 <img
                   src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-gb?size=250x83"
                   alt="Download on the App Store"
-                  className="h-10"
+                  className="h-9"
                 />
               </a>
             </div>
 
-
-            {/* Screens */}
-            <div className="flex gap-3 mb-6">
+            <div className="relative mt-6 flex gap-2 overflow-hidden rounded-2xl border border-white/10">
               {[screen1, screen2, screen3, screen4].map((img, i) => (
                 <img
                   key={i}
                   src={img}
-                  className="w-1/3 h-36 object-cover rounded-xl border border-white/20 shadow-lg"
+                  alt=""
+                  className="h-32 min-w-0 flex-1 object-cover"
                 />
               ))}
             </div>
 
-            {/* Buttons */}
-            <div className="flex gap-3">
+            <div className="relative mt-6 flex flex-wrap gap-2">
               <button
+                type="button"
                 onClick={() => setOpenBrightSpeak(true)}
-                className="px-4 py-2 bg-sky-400 text-black rounded-lg font-semibold hover:bg-sky-500 transition"
+                className="rounded-xl bg-brand-sky px-4 py-2.5 text-sm font-bold text-ink transition hover:bg-brand-skyDim"
               >
-                Learn More
+                Learn more
               </button>
-
               <Link
                 to="/case-study/brightspeak"
-                className="px-4 py-2 border border-white/40 rounded-lg font-semibold hover:bg-white/10 transition"
+                className="rounded-xl border border-white/20 px-4 py-2.5 text-sm font-semibold text-frost transition hover:bg-white/[0.06]"
               >
-                Case Study
+                Case study
               </Link>
             </div>
-          </div>
+          </article>
 
-          {/* BRIGHTBUDDY */}
-          <div className="group relative bg-white/10 border border-white/20 rounded-2xl p-8 shadow-xl hover:scale-[1.02] transition">
-            <div className="absolute -top-5 left-6 px-4 py-2 bg-pink-400 text-black rounded-full text-sm font-semibold shadow-xl">
-              In Development
-            </div>
-
-            <h3 className="text-2xl font-bold mb-3 text-pink-300">
+          <article className="surface surface-hover group relative flex flex-col overflow-hidden p-8">
+            <div className="absolute -right-6 -top-6 size-28 rounded-full bg-brand-coral/15 blur-2xl transition group-hover:bg-brand-coral/25" />
+            <span className="relative mb-4 inline-flex w-fit rounded-full bg-brand-coral/20 px-3 py-1 text-xs font-bold uppercase tracking-wide text-brand-coral">
+              In development
+            </span>
+            <h3 className="relative font-display text-2xl font-bold text-frost">
               BrightBuddy
             </h3>
-
-            <p className="text-blue-100 leading-relaxed mb-6">
-              A calm support app to help autistic children with routines,
-              emotions and confidence.
+            <p className="relative mt-3 flex-1 text-mist leading-relaxed">
+              Routine, emotions and confidence — gentle support for autistic
+              children and the adults who care for them.
             </p>
 
-            {/* Screens */}
-            <div className="flex gap-3 mb-6">
+            <div className="relative mt-6 flex gap-2 overflow-hidden rounded-2xl border border-white/10">
               {[bb1, bb2, bb3].map((img, i) => (
                 <img
                   key={i}
                   src={img}
-                  className="w-1/3 h-36 object-cover rounded-xl border border-white/20 shadow-lg"
+                  alt=""
+                  className="h-32 min-w-0 flex-1 object-cover"
                 />
               ))}
             </div>
 
-            {/* Buttons */}
-            <div className="flex gap-3">
+            <div className="relative mt-6 flex flex-wrap gap-2">
               <button
+                type="button"
                 onClick={() => setOpenBrightBuddy(true)}
-                className="px-4 py-2 bg-pink-400 text-black rounded-lg font-semibold hover:bg-pink-500 transition"
+                className="rounded-xl bg-brand-coral px-4 py-2.5 text-sm font-bold text-ink transition hover:brightness-110"
               >
-                Learn More
+                Learn more
               </button>
-
               <Link
-                to="/case-study/brightbuddy"
-                className="px-4 py-2 border border-white/40 rounded-lg font-semibold hover:bg-white/10 transition"
+                to="/case-study/brightBuddy"
+                className="rounded-xl border border-white/20 px-4 py-2.5 text-sm font-semibold text-frost transition hover:bg-white/[0.06]"
               >
-                Case Study
+                Case study
               </Link>
             </div>
-          </div>
+          </article>
 
-          {/* COMING SOON */}
-          <div className="group relative bg-white/10 border border-white/20 rounded-2xl p-8 shadow-xl hover:scale-[1.02] transition">
-            <div className="absolute -top-5 left-6 px-4 py-2 bg-purple-400 text-black rounded-full text-sm font-semibold shadow-xl">
-              Coming Soon
-            </div>
-
-            <h3 className="text-2xl font-bold mb-3 text-purple-300">
-              Next SEN App
+          <article className="surface surface-hover group relative flex flex-col overflow-hidden p-8 md:col-span-2 lg:col-span-1">
+            <div className="absolute -right-6 -top-6 size-28 rounded-full bg-brand-violet/15 blur-2xl transition group-hover:bg-brand-violet/25" />
+            <span className="relative mb-4 inline-flex w-fit rounded-full bg-brand-violet/20 px-3 py-1 text-xs font-bold uppercase tracking-wide text-brand-violet">
+              Coming soon
+            </span>
+            <h3 className="relative font-display text-2xl font-bold text-frost">
+              Next SEN app
             </h3>
-
-            <p className="text-blue-100 leading-relaxed mb-6">
-              Another supportive SEN-focused mobile app is currently in design.
+            <p className="relative mt-3 flex-1 text-mist leading-relaxed">
+              Another supportive, accessibility-led idea is in design. Watch this
+              space — or nudge me if you want to collaborate.
             </p>
-
-            <div className="h-36 flex items-center justify-center bg-white/5 border border-white/10 rounded-xl mb-6">
-              <p className="text-blue-200 opacity-70">More Soon…</p>
+            <div className="relative mt-6 flex h-36 items-center justify-center rounded-2xl border border-dashed border-white/15 bg-white/[0.03]">
+              <p className="text-sm font-semibold text-mist">Teaser incoming…</p>
             </div>
-
-            <button className="px-4 py-2 border border-white/40 rounded-lg font-semibold hover:bg-white/10 transition">
-              Stay Updated
-            </button>
-          </div>
-
+            <a
+              href="#contact"
+              className="relative mt-6 inline-flex rounded-xl border border-white/20 px-4 py-2.5 text-sm font-semibold text-frost transition hover:bg-white/[0.06]"
+            >
+              Collaborate
+            </a>
+          </article>
         </div>
       </div>
 
-      {/* ===================== POPUPS ===================== */}
-
-      {/* BrightSpeak Modal */}
       <Modal open={openBrightSpeak} onClose={() => setOpenBrightSpeak(false)}>
-        <h2 className="text-3xl font-bold mb-3 text-sky-300">BrightSpeak</h2>
-
-        <p className="text-blue-100 leading-relaxed mb-6">
+        <h2 className="font-display text-2xl font-bold text-brand-sky">
+          BrightSpeak
+        </h2>
+        <p className="mt-3 text-mist leading-relaxed">
           BrightSpeak helps non-verbal autistic children communicate emotions,
           needs and thoughts through visual tools, calm UI and supportive design.
         </p>
-
-        <div className="flex gap-3 mb-6">
+        <div className="mt-6 flex gap-2 overflow-hidden rounded-2xl border border-white/10">
           {[screen1, screen2, screen3, screen4].map((img, i) => (
             <img
               key={i}
               src={img}
-              className="w-1/3 h-40 object-cover rounded-xl border border-white/20"
+              alt=""
+              className="h-44 min-w-0 flex-1 object-cover"
             />
           ))}
         </div>
-
         <Link
+          onClick={() => setOpenBrightSpeak(false)}
           to="/case-study/brightspeak"
-          className="px-5 py-3 bg-sky-400 text-black rounded-lg font-semibold hover:bg-sky-500 transition"
+          className="btn-primary mt-6 inline-block"
         >
-          View Full Case Study
+          View full case study
         </Link>
       </Modal>
 
-      {/* BrightBuddy Modal */}
       <Modal open={openBrightBuddy} onClose={() => setOpenBrightBuddy(false)}>
-        <h2 className="text-3xl font-bold mb-3 text-pink-300">BrightBuddy</h2>
-
-        <p className="text-blue-100 leading-relaxed mb-6">
-          BrightBuddy helps autistic children feel calmer, more confident and supported
-          using gentle visuals, routine helpers and emotional reassurance tools.
+        <h2 className="font-display text-2xl font-bold text-brand-coral">
+          BrightBuddy
+        </h2>
+        <p className="mt-3 text-mist leading-relaxed">
+          BrightBuddy helps autistic children feel calmer, more confident and
+          supported using gentle visuals, routine helpers and reassurance tools.
         </p>
-
-        <div className="flex gap-3 mb-6">
+        <div className="mt-6 flex gap-2 overflow-hidden rounded-2xl border border-white/10">
           {[bb1, bb2, bb3].map((img, i) => (
             <img
               key={i}
               src={img}
-              className="w-1/3 h-40 object-cover rounded-xl border border-white/20"
+              alt=""
+              className="h-44 min-w-0 flex-1 object-cover"
             />
           ))}
         </div>
-
         <Link
-          to="/case-study/brightbuddy"
-          className="px-5 py-3 bg-pink-400 text-black rounded-lg font-semibold hover:bg-pink-500 transition"
+          onClick={() => setOpenBrightBuddy(false)}
+          to="/case-study/brightBuddy"
+          className="mt-6 inline-block rounded-xl bg-brand-coral px-5 py-3 text-sm font-bold text-ink hover:brightness-110"
         >
-          View Full Case Study
+          View full case study
         </Link>
       </Modal>
     </section>

@@ -1,73 +1,150 @@
-import AndroidPhone from "../components/AndroidPhone";
+import AndroidPhone from "./AndroidPhone";
+import BrowserMockup from "./BrowserMockup";
 import screen1 from "../assets/brightspeak.jpg";
 import screen2 from "../assets/brightspeak2.jpg";
 import screen3 from "../assets/brightspeak3.jpg";
 import screen4 from "../assets/brightspeak4.jpg";
-import logo from "../assets/brightsenapps.png"; 
-
+import logo from "../assets/brightsenapps.png";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[100vh] flex items-center px-8 lg:px-20 py-20 text-white overflow-hidden">
-
-      {/* Floating Shapes */}
-      <div className="absolute w-72 h-72 bg-sky-500/30 blur-3xl rounded-full top-10 left-10 animate-float"></div>
-      <div className="absolute w-72 h-72 bg-pink-400/30 blur-3xl rounded-full bottom-10 right-10 animate-float-delayed"></div>
-
-      <div className="w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-
-        {/* LEFT TEXT */}
-        <div className="animate-fade">
-
-        <div className="inline-flex items-center justify-center mb-10 rounded-2xl bg-white/90 backdrop-blur-md px-6 py-4 shadow-xl shadow-sky-500/20">
-      <img
-        src={logo}
-        alt="BrightSEN Apps"
-        className="w-40 lg:w-48"
+    <section className="relative isolate min-h-[100dvh] overflow-hidden px-6 pb-24 pt-8 text-frost lg:px-16 lg:pb-28 lg:pt-10">
+      <div
+        className="pointer-events-none absolute inset-0 bg-[length:48px_48px] bg-grid-fade opacity-[0.35]"
+        aria-hidden
       />
-    </div>
+      <div
+        className="pointer-events-none absolute -left-32 top-20 size-[420px] rounded-full bg-brand-sky/25 blur-[100px]"
+        aria-hidden
+      />
+      <div
+        className="pointer-events-none absolute -right-20 bottom-10 size-[380px] rounded-full bg-brand-violet/20 blur-[100px]"
+        aria-hidden
+      />
+      <div
+        className="pointer-events-none absolute left-1/2 top-1/2 size-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-brand-coral/10 blur-[120px]"
+        aria-hidden
+      />
 
-          <span className="inline-block mb-6 px-6 py-3 rounded-full text-sm border border-white/30 bg-white/10 text-blue-100 tracking-wide shadow-xl shadow-sky-400/20">
-            🌈 Autism & SEN Focused App Developer
-          </span>
-
-          <h1 className="text-4xl lg:text-6xl font-extrabold leading-[1.15] mb-8 pb-1 bg-gradient-to-r from-sky-300 via-white to-sky-200 bg-clip-text text-transparent">
-            Building Mobile Apps  
-            That Support, Empower  
-            & Give A Voice To Everyone 💙
-          </h1>
-
-          <p className="text-xl text-blue-100 leading-loose mb-10 max-w-2xl">
-            I’m Karl — I build calm, thoughtful and supportive React Native apps
-            designed specially for Autism & SEN users. My focus is emotional
-            comfort, accessibility and real-world impact.
-          </p>
-
-          <div className="flex gap-4 flex-wrap">
-            <a
-              href="#projects"
-              className="px-8 py-4 rounded-xl font-semibold text-lg bg-sky-400 text-black hover:bg-sky-500 transition shadow-xl shadow-sky-400/40"
-            >
-              View My Work
-            </a>
-
-            <a
-              href="#contact"
-              className="px-8 py-4 rounded-xl font-semibold text-lg border border-white/60 hover:bg-white/10 transition shadow-xl shadow-white/10"
-            >
-              Get In Touch
-            </a>
+      <div className="relative z-10 mx-auto max-w-7xl">
+        <div className="mb-10 flex flex-col items-start gap-6 sm:flex-row sm:items-center sm:justify-between animate-fade">
+          <div className="surface inline-flex items-center gap-4 px-4 py-3 pr-6">
+            <img
+              src={logo}
+              alt="BrightSEN Apps"
+              className="h-10 w-auto sm:h-11"
+            />
+            <div className="hidden h-10 w-px bg-white/15 sm:block" aria-hidden />
+            <p className="max-w-xs text-sm leading-snug text-mist">
+              <span className="font-semibold text-frost">Karl Roe</span>
+              <br />
+              SEN-focused products &amp; client websites
+            </p>
+          </div>
+          <div className="eyebrow border-brand-amber/30 bg-brand-amber/[0.08] text-brand-amber">
+            Open for website projects
           </div>
         </div>
 
-        {/* RIGHT PHONE */}
-        <div className="flex justify-center lg:justify-end animate-fade-slow">
-          <AndroidPhone
-            images={[screen1, screen2, screen3, screen4]}
-            interval={3000}
-          />
-        </div>
+        <div className="grid grid-cols-1 items-center gap-14 lg:grid-cols-12 lg:gap-12">
+          <div className="lg:col-span-6 animate-fade">
+            <h1 className="headline text-4xl leading-[1.05] sm:text-5xl lg:text-6xl xl:text-[3.5rem]">
+              Calm, capable{" "}
+              <span className="gradient-text">mobile apps</span>
+              <span className="text-mist"> — and </span>
+              <span className="gradient-text-warm">websites</span>
+              <span className="text-frost"> people actually use.</span>
+            </h1>
+            <p className="mt-6 max-w-xl text-lg leading-relaxed text-mist">
+              I&apos;m Karl. I build supportive React Native apps for Autism
+              &amp; SEN communities, and I partner with small teams who need a
+              sharp, fast, accessible site — without the stress.
+            </p>
 
+            <div className="mt-10 grid gap-4 sm:grid-cols-2">
+              <a
+                href="#projects"
+                className="surface surface-hover group relative overflow-hidden p-6 text-left"
+              >
+                <div className="mb-3 flex items-center justify-between gap-3">
+                  <span className="text-xs font-bold uppercase tracking-widest text-brand-sky">
+                    Mobile apps
+                  </span>
+                  <span className="rounded-full bg-brand-sky/15 px-2 py-0.5 text-[10px] font-bold text-brand-sky">
+                    SEN
+                  </span>
+                </div>
+                <p className="text-sm leading-relaxed text-mist">
+                  BrightSpeak, BrightBuddy &amp; thoughtful tools that prioritise
+                  comfort and clarity.
+                </p>
+                <span className="mt-4 inline-flex items-center gap-2 text-sm font-bold text-frost group-hover:text-brand-sky">
+                  View app work
+                  <span aria-hidden>→</span>
+                </span>
+                <div
+                  className="pointer-events-none absolute -right-8 -top-8 size-32 rounded-full bg-brand-sky/10 blur-2xl transition group-hover:bg-brand-sky/20"
+                  aria-hidden
+                />
+              </a>
+
+              <a
+                href="#services"
+                className="surface surface-hover group relative overflow-hidden border-brand-amber/20 p-6 text-left ring-1 ring-brand-amber/15"
+              >
+                <div className="mb-3 flex items-center justify-between gap-3">
+                  <span className="text-xs font-bold uppercase tracking-widest text-brand-amber">
+                    Websites
+                  </span>
+                  <span className="rounded-full bg-brand-amber/15 px-2 py-0.5 text-[10px] font-bold text-brand-amber">
+                    For hire
+                  </span>
+                </div>
+                <p className="text-sm leading-relaxed text-mist">
+                  Landing pages &amp; small business sites — modern stack, SEO
+                  friendly, easy to grow.
+                </p>
+                <span className="mt-4 inline-flex items-center gap-2 text-sm font-bold text-frost group-hover:text-brand-amber">
+                  See what I offer
+                  <span aria-hidden>→</span>
+                </span>
+                <div
+                  className="pointer-events-none absolute -right-8 -top-8 size-32 rounded-full bg-brand-amber/10 blur-2xl transition group-hover:bg-brand-amber/20"
+                  aria-hidden
+                />
+              </a>
+            </div>
+
+            <div className="mt-8 flex flex-wrap gap-3">
+              <a href="#contact" className="btn-warm">
+                Start a project
+              </a>
+              <a href="#services" className="btn-ghost">
+                Website details
+              </a>
+            </div>
+          </div>
+
+          <div className="relative lg:col-span-6">
+            <div className="flex flex-col items-center justify-center gap-10 lg:flex-row lg:items-end lg:justify-end lg:gap-8">
+              <div className="relative animate-float">
+                <span className="absolute -left-2 top-6 z-10 rounded-full bg-brand-sky/90 px-3 py-1 text-[11px] font-bold uppercase tracking-wide text-ink shadow-lg">
+                  Apps
+                </span>
+                <AndroidPhone
+                  images={[screen1, screen2, screen3, screen4]}
+                  interval={3000}
+                />
+              </div>
+              <div className="relative animate-float-delayed pb-2 lg:translate-y-4">
+                <span className="absolute -right-1 top-0 z-10 rounded-full bg-brand-amber/95 px-3 py-1 text-[11px] font-bold uppercase tracking-wide text-ink shadow-lg">
+                  Web
+                </span>
+                <BrowserMockup />
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

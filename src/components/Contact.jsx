@@ -2,85 +2,89 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="relative py-24 px-6 lg:px-20 text-white overflow-hidden"
+      className="relative scroll-mt-28 px-6 py-24 text-frost lg:px-20"
     >
-      {/* soft glow */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-sky-900/10 to-transparent pointer-events-none" />
+      <div
+        className="pointer-events-none absolute inset-0 bg-gradient-to-t from-brand-violet/10 via-transparent to-transparent"
+        aria-hidden
+      />
 
-      <div className="max-w-6xl mx-auto text-center">
-
-        {/* Badge */}
-        <span className="inline-block mb-5 px-6 py-2 rounded-full text-sm border border-white/30 bg-white/10 text-blue-100 shadow-lg shadow-sky-300/20">
-          💬 Get In Touch
-        </span>
-
-        {/* Title */}
-      <h2 className="text-4xl lg:text-6xl font-extrabold mb-6 pb-2 bg-gradient-to-r from-sky-300 via-white to-sky-200 bg-clip-text text-transparent animate-fade">
-        Let’s Work Together
-      </h2>
-
-        {/* Text */}
-        <p className="text-blue-100 text-lg lg:text-xl max-w-3xl mx-auto leading-relaxed mb-10">
-          Whether you want to collaborate, hire me, or talk about an Autism / SEN
-          focused idea — I’d genuinely love to chat.  
-          My goal is to build tools that **help real people** 💙
-        </p>
-
-        {/* Card */}
-        <div className="bg-white/10 border border-white/20 rounded-2xl p-10 max-w-3xl mx-auto shadow-xl shadow-black/40 animate-fade">
-
-          <p className="text-blue-100 text-lg leading-relaxed mb-6">
-            Drop me a message anytime — I’m friendly, I care deeply about SEN work,
-            and I’m always happy to listen.
-          </p>
-
-          {/* Buttons */}
-          <div className="flex justify-center gap-4 flex-wrap">
-
-            {/* Email */}
-            <a
-              href="mailto:brightsenapps@brightsenapps.com"
-              className="px-7 py-3 rounded-lg font-semibold bg-sky-400 text-black hover:bg-sky-500 transition shadow-xl shadow-sky-400/30"
-            >
-              📧 Email Me
-            </a>
-
-            {/* LinkedIn placeholder */}
-           <a
-            href="https://www.linkedin.com/in/karl-aboltins-roe-249b0417b"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-7 py-3 rounded-lg font-semibold border border-white/50 hover:bg-white/10 transition shadow-lg shadow-white/10"
-          >
-            🔗 LinkedIn
-          </a>
-
-            {/* GitHub placeholder */}
-            <a
-            href="https://github.com/K-Roe"
-            target="_blank"
-            rel="noopener noreferrer"
-              className="px-7 py-3 rounded-lg font-semibold border border-white/50 hover:bg-white/10 transition shadow-lg shadow-white/10"
-            >
-              🧑‍💻 GitHub
-            </a>
-
-              {/* Instagram placeholder */}
-              <a
-              href="https://www.instagram.com/brightsenapps/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-7 py-3 rounded-lg font-semibold border border-white/50 hover:bg-white/10 transition shadow-lg shadow-white/10"
-            >
-              📸 Instagram
-            </a>
-
-            
+      <div className="relative z-10 mx-auto max-w-6xl">
+        <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
+          <div>
+            <span className="eyebrow">Contact</span>
+            <h2 className="headline mt-5 text-4xl sm:text-5xl lg:text-6xl">
+              Tell me what you&apos;re{" "}
+              <span className="gradient-text">building next</span>
+            </h2>
+            <p className="mt-6 text-lg leading-relaxed text-mist">
+              Websites, app ideas, partnerships — I read every message. For
+              website enquiries, include your business name, what you need the
+              site to achieve, and any deadline you&apos;re aiming for.
+            </p>
+            <ul className="mt-8 space-y-3 text-mist">
+              <li className="flex gap-3">
+                <span className="mt-1 font-bold text-brand-amber">①</span>
+                <span>
+                  <strong className="text-frost">Websites:</strong> ideal
+                  pages, inspiration links, and whether you have text/photos
+                  ready.
+                </span>
+              </li>
+              <li className="flex gap-3">
+                <span className="mt-1 font-bold text-brand-sky">②</span>
+                <span>
+                  <strong className="text-frost">Apps / SEN work:</strong> who
+                  the product helps and what problem you&apos;re solving — no
+                  pitch deck required.
+                </span>
+              </li>
+            </ul>
           </div>
 
-          <p className="text-blue-200 opacity-70 mt-6">
-            More socials & ways to connect coming soon 😊
-          </p>
+          <div className="surface p-8 sm:p-10">
+            <p className="text-sm font-bold uppercase tracking-widest text-mist">
+              Direct lines
+            </p>
+            <p className="mt-4 text-mist leading-relaxed">
+              Prefer email? That&apos;s the best place to start — I&apos;ll
+              follow up with clear next steps.
+            </p>
+            <div className="mt-8 flex flex-col gap-3">
+              <a href="mailto:brightsenapps@brightsenapps.com" className="btn-warm justify-center">
+                Email BrightSen
+              </a>
+              <div className="flex flex-wrap gap-2">
+                <a
+                  href="https://www.linkedin.com/in/karl-aboltins-roe-249b0417b"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-ghost flex-1 min-w-[140px]"
+                >
+                  LinkedIn
+                </a>
+                <a
+                  href="https://github.com/K-Roe"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-ghost flex-1 min-w-[140px]"
+                >
+                  GitHub
+                </a>
+                <a
+                  href="https://www.instagram.com/brightsenapps/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-ghost flex-1 min-w-[140px]"
+                >
+                  Instagram
+                </a>
+              </div>
+            </div>
+            <p className="mt-8 border-t border-white/10 pt-6 text-center text-sm text-mist">
+              Based in the UK · Remote-friendly for web projects
+            </p>
+          </div>
         </div>
       </div>
     </section>
