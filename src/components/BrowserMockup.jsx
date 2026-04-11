@@ -17,7 +17,7 @@ export default function BrowserMockup({ slides = [], interval = 3500 }) {
   const current = hasSlides ? slides[index] : null;
 
   return (
-    <div className="relative w-full max-w-[min(100%,360px)] animate-fade-slow">
+    <div className="relative w-full animate-fade-slow">
       <div
         className="absolute -inset-1 rounded-[1.35rem] bg-gradient-to-br from-brand-amber/35 via-brand-violet/25 to-brand-sky/20 opacity-90 blur-lg"
         aria-hidden
@@ -38,7 +38,7 @@ export default function BrowserMockup({ slides = [], interval = 3500 }) {
         </div>
 
         {hasSlides ? (
-          <div className="relative aspect-[4/3] w-full bg-[#0c1017]">
+          <div className="relative aspect-[16/10] w-full bg-[#0c1017] sm:aspect-[16/9]">
             <img
               src={current.src}
               alt={current.alt}

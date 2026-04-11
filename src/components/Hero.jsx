@@ -137,8 +137,8 @@ export default function Hero() {
           </div>
 
           <div className="relative lg:col-span-6">
-            <div className="flex flex-col items-center justify-center gap-10 lg:flex-row lg:items-end lg:justify-end lg:gap-8">
-              <div className="relative animate-float">
+            <div className="mx-auto flex w-full max-w-xl flex-col items-center gap-12 lg:mx-0 lg:ml-auto lg:max-w-none lg:items-stretch lg:gap-14">
+              <div className="relative w-fit animate-float lg:self-end">
                 <span className="absolute -left-2 top-6 z-10 rounded-full bg-brand-sky/90 px-3 py-1 text-[11px] font-bold uppercase tracking-wide text-ink shadow-lg">
                   Apps
                 </span>
@@ -147,11 +147,17 @@ export default function Hero() {
                   interval={3000}
                 />
               </div>
-              <div className="relative animate-float-delayed pb-2 lg:translate-y-4">
-                <span className="absolute -right-1 top-0 z-10 rounded-full bg-brand-amber/95 px-3 py-1 text-[11px] font-bold uppercase tracking-wide text-ink shadow-lg">
-                  Web
-                </span>
-                <BrowserMockup slides={shopWebSlides} interval={3500} />
+
+              <div className="relative w-full border-t border-white/[0.08] pt-12 lg:pt-14">
+                <p className="mb-6 text-center text-[11px] font-bold uppercase tracking-[0.2em] text-mist lg:text-left">
+                  Web builds
+                </p>
+                <div className="relative mx-auto w-full max-w-[min(100%,540px)] animate-float-delayed lg:mx-0 lg:ml-auto lg:max-w-[min(100%,580px)]">
+                  <span className="absolute -right-1 top-0 z-10 rounded-full bg-brand-amber/95 px-3 py-1 text-[11px] font-bold uppercase tracking-wide text-ink shadow-lg">
+                    Web
+                  </span>
+                  <BrowserMockup slides={shopWebSlides} interval={3500} />
+                </div>
               </div>
             </div>
           </div>
