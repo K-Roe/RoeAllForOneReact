@@ -5,6 +5,17 @@ import screen2 from "../assets/brightspeak2.jpg";
 import screen3 from "../assets/brightspeak3.jpg";
 import screen4 from "../assets/brightspeak4.jpg";
 import logo from "../assets/brightsenapps.png";
+import shopHome from "../assets/shop-madebygeeks-home.png";
+import shopAdminOverview from "../assets/shop-admin-overview.png";
+import shopAdminProducts from "../assets/shop-admin-products.png";
+import shopAdminOrders from "../assets/shop-admin-orders.png";
+
+const shopWebSlides = [
+  { src: shopHome, alt: "Made by Geeks storefront — hero and navigation" },
+  { src: shopAdminOverview, alt: "Shop admin — overview dashboard" },
+  { src: shopAdminProducts, alt: "Shop admin — products catalog" },
+  { src: shopAdminOrders, alt: "Shop admin — orders" },
+];
 
 export default function Hero() {
   return (
@@ -32,9 +43,9 @@ export default function Hero() {
             <img
               src={logo}
               alt="BrightSEN Apps"
-              className="h-10 w-auto sm:h-11"
+              className="h-14 w-auto max-w-[9.5rem] object-contain object-left sm:h-16 sm:max-w-[11rem]"
             />
-            <div className="hidden h-10 w-px bg-white/15 sm:block" aria-hidden />
+            <div className="hidden h-14 w-px bg-white/15 sm:block sm:h-16" aria-hidden />
             <p className="max-w-xs text-sm leading-snug text-mist">
               <span className="font-semibold text-frost">Karl Roe</span>
               <br />
@@ -140,7 +151,7 @@ export default function Hero() {
                 <span className="absolute -right-1 top-0 z-10 rounded-full bg-brand-amber/95 px-3 py-1 text-[11px] font-bold uppercase tracking-wide text-ink shadow-lg">
                   Web
                 </span>
-                <BrowserMockup />
+                <BrowserMockup slides={shopWebSlides} interval={3500} />
               </div>
             </div>
           </div>
