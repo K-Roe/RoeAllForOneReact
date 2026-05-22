@@ -1,21 +1,10 @@
 import AndroidPhone from "./AndroidPhone";
-import BrowserMockup from "./BrowserMockup";
+import TapestryAssociation from "./TapestryAssociation";
 import screen1 from "../assets/brightspeak.jpg";
 import screen2 from "../assets/brightspeak2.jpg";
 import screen3 from "../assets/brightspeak3.jpg";
 import screen4 from "../assets/brightspeak4.jpg";
 import logo from "../assets/brightsenapps.png";
-import shopHome from "../assets/shop-madebygeeks-home.png";
-import shopAdminOverview from "../assets/shop-admin-overview.png";
-import shopAdminProducts from "../assets/shop-admin-products.png";
-import shopAdminOrders from "../assets/shop-admin-orders.png";
-
-const shopWebSlides = [
-  { src: shopHome, alt: "Made by Geeks storefront — hero and navigation" },
-  { src: shopAdminOverview, alt: "Shop admin — overview dashboard" },
-  { src: shopAdminProducts, alt: "Shop admin — products catalog" },
-  { src: shopAdminOrders, alt: "Shop admin — orders" },
-];
 
 export default function Hero() {
   return (
@@ -49,11 +38,14 @@ export default function Hero() {
             <p className="max-w-xs text-sm leading-snug text-mist">
               <span className="font-semibold text-frost">Karl Roe</span>
               <br />
-              SEN-focused products &amp; client websites
+              SEN-focused mobile apps
             </p>
           </div>
-          <div className="eyebrow border-brand-amber/30 bg-brand-amber/[0.08] text-brand-amber">
-            Open for website projects
+          <div className="flex flex-col items-start gap-2 sm:items-end">
+            <div className="eyebrow border-brand-sky/30 bg-brand-sky/[0.08] text-brand-sky">
+              BrightSpeak on Play &amp; App Store
+            </div>
+            <TapestryAssociation variant="hero" />
           </div>
         </div>
 
@@ -62,20 +54,23 @@ export default function Hero() {
             <h1 className="headline text-4xl leading-[1.05] sm:text-5xl lg:text-6xl xl:text-[3.5rem]">
               Calm, capable{" "}
               <span className="gradient-text">mobile apps</span>
-              <span className="text-mist"> — and </span>
-              <span className="gradient-text-warm">websites</span>
-              <span className="text-frost"> people actually use.</span>
+              <span className="text-frost"> for Autism &amp; SEN.</span>
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-mist">
-              I&apos;m Karl. I build supportive React Native apps for Autism
-              &amp; SEN communities, and I partner with small teams who need a
-              sharp, fast, accessible site — without the stress.
+              I&apos;m Karl. I build supportive React Native apps for non-verbal
+              and autistic children, families and educators — with the same care
+              I&apos;d want for my own son.
+            </p>
+            <p className="mt-4 max-w-xl text-sm leading-relaxed text-mist/90">
+              BrightSen exists to make communication and daily life a little
+              easier: visual tools, calm UI, and features shaped by real SEN
+              experience — not generic “kid app” templates.
             </p>
 
-            <div className="mt-10 grid gap-4 sm:grid-cols-2">
+            <div className="mt-10">
               <a
                 href="#projects"
-                className="surface surface-hover group relative overflow-hidden p-6 text-left"
+                className="surface surface-hover group relative block overflow-hidden p-6 text-left sm:max-w-md"
               >
                 <div className="mb-3 flex items-center justify-between gap-3">
                   <span className="text-xs font-bold uppercase tracking-widest text-brand-sky">
@@ -98,67 +93,27 @@ export default function Hero() {
                   aria-hidden
                 />
               </a>
-
-              <a
-                href="#services"
-                className="surface surface-hover group relative overflow-hidden border-brand-amber/20 p-6 text-left ring-1 ring-brand-amber/15"
-              >
-                <div className="mb-3 flex items-center justify-between gap-3">
-                  <span className="text-xs font-bold uppercase tracking-widest text-brand-amber">
-                    Websites
-                  </span>
-                  <span className="rounded-full bg-brand-amber/15 px-2 py-0.5 text-[10px] font-bold text-brand-amber">
-                    For hire
-                  </span>
-                </div>
-                <p className="text-sm leading-relaxed text-mist">
-                  Landing pages &amp; small business sites — modern stack, SEO
-                  friendly, easy to grow.
-                </p>
-                <span className="mt-4 inline-flex items-center gap-2 text-sm font-bold text-frost group-hover:text-brand-amber">
-                  See what I offer
-                  <span aria-hidden>→</span>
-                </span>
-                <div
-                  className="pointer-events-none absolute -right-8 -top-8 size-32 rounded-full bg-brand-amber/10 blur-2xl transition group-hover:bg-brand-amber/20"
-                  aria-hidden
-                />
-              </a>
             </div>
 
             <div className="mt-8 flex flex-wrap gap-3">
-              <a href="#contact" className="btn-warm">
-                Start a project
+              <a href="#projects" className="btn-primary">
+                Explore apps
               </a>
-              <a href="#services" className="btn-ghost">
-                Website details
+              <a href="#contact" className="btn-ghost">
+                Feedback &amp; collaboration
               </a>
             </div>
           </div>
 
-          <div className="relative lg:col-span-6">
-            <div className="mx-auto flex w-full max-w-xl flex-col items-center gap-12 lg:mx-0 lg:ml-auto lg:max-w-none lg:items-stretch lg:gap-14">
-              <div className="relative w-fit animate-float lg:self-end">
-                <span className="absolute -left-2 top-6 z-10 rounded-full bg-brand-sky/90 px-3 py-1 text-[11px] font-bold uppercase tracking-wide text-ink shadow-lg">
-                  Apps
-                </span>
-                <AndroidPhone
-                  images={[screen1, screen2, screen3, screen4]}
-                  interval={3000}
-                />
-              </div>
-
-              <div className="relative w-full border-t border-white/[0.08] pt-12 lg:pt-14">
-                <p className="mb-6 text-center text-[11px] font-bold uppercase tracking-[0.2em] text-mist lg:text-left">
-                  Web builds
-                </p>
-                <div className="relative mx-auto w-full max-w-[min(100%,540px)] animate-float-delayed lg:mx-0 lg:ml-auto lg:max-w-[min(100%,580px)]">
-                  <span className="absolute -right-1 top-0 z-10 rounded-full bg-brand-amber/95 px-3 py-1 text-[11px] font-bold uppercase tracking-wide text-ink shadow-lg">
-                    Web
-                  </span>
-                  <BrowserMockup slides={shopWebSlides} interval={3500} />
-                </div>
-              </div>
+          <div className="relative flex justify-center lg:col-span-6 lg:justify-end">
+            <div className="relative w-fit animate-float">
+              <span className="absolute -left-2 top-6 z-10 rounded-full bg-brand-sky/90 px-3 py-1 text-[11px] font-bold uppercase tracking-wide text-ink shadow-lg">
+                Apps
+              </span>
+              <AndroidPhone
+                images={[screen1, screen2, screen3, screen4]}
+                interval={3000}
+              />
             </div>
           </div>
         </div>

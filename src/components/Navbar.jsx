@@ -11,7 +11,7 @@ export default function Navbar() {
   const isCaseStudy = location.pathname.includes("/case-study");
 
   useEffect(() => {
-    const sections = ["services", "projects", "contact"];
+    const sections = ["projects", "contact"];
 
     const handleScroll = () => {
       sections.forEach((id) => {
@@ -47,7 +47,7 @@ export default function Navbar() {
           <span className="min-w-0 leading-tight">
             <span className="block truncate text-sm sm:text-base">BrightSen</span>
             <span className="hidden text-[11px] font-semibold uppercase tracking-widest text-mist sm:block">
-              Apps · Websites
+              Apps
             </span>
           </span>
         </Link>
@@ -55,16 +55,6 @@ export default function Navbar() {
         {!isCaseStudy && (
           <>
             <nav className="hidden items-center gap-1 text-sm font-semibold text-mist md:flex">
-              <a
-                href="/#services"
-                className={`rounded-xl px-3 py-2 transition ${
-                  active === "services"
-                    ? "bg-white/12 text-frost"
-                    : "hover:bg-white/[0.06] hover:text-frost"
-                }`}
-              >
-                Websites
-              </a>
               <a
                 href="/#projects"
                 className={`rounded-xl px-3 py-2 transition ${
@@ -123,17 +113,17 @@ export default function Navbar() {
 
               <a
                 href="/#contact"
-                className="ml-2 shrink-0 rounded-2xl bg-gradient-to-r from-brand-amber to-amber-400 px-4 py-2.5 text-xs font-bold text-ink shadow-glow-warm transition hover:brightness-110"
+                className="ml-2 shrink-0 rounded-2xl bg-gradient-to-r from-brand-sky to-brand-skyDim px-4 py-2.5 text-xs font-bold text-ink shadow-glow transition hover:brightness-110"
               >
-                Hire for a site
+                Get in touch
               </a>
             </nav>
 
             <a
               href="/#contact"
-              className="btn-warm hidden !py-2.5 !text-xs sm:inline-flex md:hidden"
+              className="btn-primary hidden !py-2.5 !text-xs sm:inline-flex md:hidden"
             >
-              Hire me
+              Collaborate
             </a>
           </>
         )}
@@ -160,13 +150,6 @@ export default function Navbar() {
 
       {open && !isCaseStudy && (
         <div className="mx-auto mt-2 flex max-w-7xl flex-col gap-1 rounded-2xl border border-white/10 bg-ink/95 p-4 shadow-panel backdrop-blur-xl md:hidden">
-          <a
-            href="/#services"
-            onClick={() => setOpen(false)}
-            className="rounded-xl px-3 py-3 font-semibold text-frost hover:bg-white/[0.06]"
-          >
-            Websites
-          </a>
           <a
             href="/#projects"
             onClick={() => setOpen(false)}
@@ -198,9 +181,9 @@ export default function Navbar() {
           <a
             href="/#contact"
             onClick={() => setOpen(false)}
-            className="btn-warm mt-2 justify-center"
+            className="btn-primary mt-2 justify-center"
           >
-            Hire for a website
+            Get in touch
           </a>
         </div>
       )}

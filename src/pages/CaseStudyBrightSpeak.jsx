@@ -1,8 +1,13 @@
 import { Link } from "react-router-dom";
+import TapestryAssociation from "../components/TapestryAssociation";
+import BrightSpeakStoreBadges from "../components/BrightSpeakStoreBadges";
+import { brightSpeakScreenAlts } from "../constants/brightSpeakScreens";
 import screen1 from "../assets/brightspeak.jpg";
 import screen2 from "../assets/brightspeak2.jpg";
 import screen3 from "../assets/brightspeak3.jpg";
 import screen4 from "../assets/brightspeak4.jpg";
+
+const screens = [screen1, screen2, screen3, screen4];
 
 export default function CaseStudyBrightSpeak() {
   return (
@@ -20,6 +25,10 @@ export default function CaseStudyBrightSpeak() {
           emotionally supportive tools — bridging the gap between children,
           families and schools.
         </p>
+
+        <div className="mt-8">
+          <TapestryAssociation variant="block" />
+        </div>
 
         <div className="mt-14 grid gap-6 md:grid-cols-3">
           {[
@@ -78,11 +87,11 @@ export default function CaseStudyBrightSpeak() {
             powerful, clear and structured.
           </p>
           <div className="mt-10 grid gap-6 md:grid-cols-3">
-            {[screen1, screen2, screen3, screen4].map((img, i) => (
+            {screens.map((img, i) => (
               <img
                 key={i}
                 src={img}
-                alt=""
+                alt={brightSpeakScreenAlts[i]}
                 className="rounded-3xl border border-white/10 shadow-panel"
               />
             ))}
@@ -105,7 +114,7 @@ export default function CaseStudyBrightSpeak() {
         <div className="surface mt-10 p-8 sm:p-10">
           <h2 className="font-display text-3xl font-bold text-frost">Tech</h2>
           <div className="mt-6 flex flex-wrap gap-2">
-            {["React Native", "Expo", "Android"].map((x) => (
+            {["React Native", "Expo", "Android", "iOS"].map((x) => (
               <span
                 key={x}
                 className="rounded-full border border-white/15 bg-white/[0.05] px-4 py-2 text-sm font-semibold text-mist"
@@ -118,12 +127,13 @@ export default function CaseStudyBrightSpeak() {
 
         <div className="mt-20 rounded-3xl border border-brand-sky/25 bg-gradient-to-br from-brand-sky/10 to-transparent p-10 text-center">
           <h2 className="font-display text-3xl font-bold text-frost">
-            This is just the beginning
+            Download BrightSpeak
           </h2>
           <p className="mx-auto mt-4 max-w-3xl text-mist">
-            BrightSpeak will continue to grow with more tools, emotional support
-            features, visual communication options and SEN-driven enhancements.
+            Available on Google Play and the App Store — built for families and
+            the early years settings that support them.
           </p>
+          <BrightSpeakStoreBadges className="mt-8 justify-center" />
           <Link to="/" className="btn-primary mt-8 inline-flex">
             Back to portfolio
           </Link>

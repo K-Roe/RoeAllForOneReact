@@ -18,25 +18,31 @@ export default function Contact() {
               <span className="gradient-text">building next</span>
             </h2>
             <p className="mt-6 text-lg leading-relaxed text-mist">
-              Websites, app ideas, partnerships — I read every message. For
-              website enquiries, include your business name, what you need the
-              site to achieve, and any deadline you&apos;re aiming for.
+              App ideas, BrightSpeak feedback, beta testing, educator partnerships
+              — I read every message. No pitch deck required.
             </p>
             <ul className="mt-8 space-y-3 text-mist">
               <li className="flex gap-3">
-                <span className="mt-1 font-bold text-brand-amber">①</span>
+                <span className="mt-1 font-bold text-brand-sky">①</span>
                 <span>
-                  <strong className="text-frost">Websites:</strong> ideal
-                  pages, inspiration links, and whether you have text/photos
-                  ready.
+                  <strong className="text-frost">BrightSpeak users:</strong> what
+                  helps, what&apos;s confusing, and what you&apos;d love to see
+                  next — parents, carers and teachers welcome.
                 </span>
               </li>
               <li className="flex gap-3">
-                <span className="mt-1 font-bold text-brand-sky">②</span>
+                <span className="mt-1 font-bold text-brand-coral">②</span>
                 <span>
-                  <strong className="text-frost">Apps / SEN work:</strong> who
-                  the product helps and what problem you&apos;re solving — no
-                  pitch deck required.
+                  <strong className="text-frost">SEN collaboration:</strong> who
+                  the product helps and what problem you&apos;re solving together.
+                </span>
+              </li>
+              <li className="flex gap-3">
+                <span className="mt-1 font-bold text-brand-violet">③</span>
+                <span>
+                  <strong className="text-frost">Beta &amp; research:</strong> if
+                  you work with autistic children and want early access to new
+                  BrightSen apps.
                 </span>
               </li>
             </ul>
@@ -51,7 +57,7 @@ export default function Contact() {
               follow up with clear next steps.
             </p>
             <div className="mt-8 flex flex-col gap-3">
-              <a href="mailto:brightsenapps@brightsenapps.com" className="btn-warm justify-center">
+              <a href="mailto:brightsenapps@brightsenapps.com" className="btn-primary justify-center">
                 Email BrightSen
               </a>
               <div className="flex flex-wrap gap-2">
@@ -82,7 +88,7 @@ export default function Contact() {
               </div>
             </div>
             <p className="mt-8 border-t border-white/10 pt-6 text-center text-sm text-mist">
-              Based in the UK · Remote-friendly for web projects
+              Based in the UK · Building for families everywhere
             </p>
           </div>
         </div>

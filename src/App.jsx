@@ -3,7 +3,6 @@ import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Projects from "./components/Projects";
-import Services from "./components/Services";
 import Contact from "./components/Contact";
 import CaseStudyBrightSpeak from "./pages/CaseStudyBrightSpeak";
 import CaseStudyBrightBuddy from "./pages/CaseStudyBrightBuddy";
@@ -21,7 +20,6 @@ export default function App() {
             element={
               <>
                 <Hero />
-                <Services />
                 <Projects />
                 <Contact />
               </>
