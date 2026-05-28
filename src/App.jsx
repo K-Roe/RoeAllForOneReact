@@ -6,6 +6,7 @@ import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import CaseStudyBrightSpeak from "./pages/CaseStudyBrightSpeak";
 import CaseStudyBrightBuddy from "./pages/CaseStudyBrightBuddy";
+import Donate from "./pages/Donate";
 
 export default function App() {
   return (
@@ -34,6 +35,7 @@ export default function App() {
             path="/case-study/brightBuddy"
             element={<CaseStudyBrightBuddy />}
           />
+          <Route path="/donate" element={<Donate />} />
         </Routes>
       </div>
     </>

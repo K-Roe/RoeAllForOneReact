@@ -8,7 +8,9 @@ export default function Navbar() {
   const [active, setActive] = useState("");
 
   const location = useLocation();
-  const isCaseStudy = location.pathname.includes("/case-study");
+  const isCaseStudy =
+    location.pathname.includes("/case-study") ||
+    location.pathname === "/donate";
 
   useEffect(() => {
     const sections = ["projects", "contact"];
@@ -75,6 +77,12 @@ export default function Navbar() {
               >
                 Contact
               </a>
+              <Link
+                to="/donate"
+                className="rounded-xl px-3 py-2 transition hover:bg-white/[0.06] hover:text-frost"
+              >
+                Support
+              </Link>
 
               <div className="relative ml-1">
                 <button
@@ -164,6 +172,13 @@ export default function Navbar() {
           >
             Contact
           </a>
+          <Link
+            to="/donate"
+            onClick={() => setOpen(false)}
+            className="rounded-xl px-3 py-3 font-semibold text-frost hover:bg-white/[0.06]"
+          >
+            Support / Donate
+          </Link>
           <Link
             to="/case-study/brightspeak"
             onClick={() => setOpen(false)}
