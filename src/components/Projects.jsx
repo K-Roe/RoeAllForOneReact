@@ -70,7 +70,15 @@ export default function Projects() {
               ))}
             </div>
 
-            <div className="relative mt-6 flex flex-wrap gap-2">
+            <Link
+              to="/donate"
+              className="relative mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-sky transition hover:text-frost"
+            >
+              Support BrightSen
+              <span aria-hidden>→</span>
+            </Link>
+
+            <div className="relative mt-4 flex flex-wrap gap-2">
               <button
                 type="button"
                 onClick={() => setOpenBrightSpeak(true)}
@@ -172,13 +180,22 @@ export default function Projects() {
             />
           ))}
         </div>
-        <Link
-          onClick={() => setOpenBrightSpeak(false)}
-          to="/case-study/brightspeak"
-          className="btn-primary mt-6 inline-block"
-        >
-          View full case study
-        </Link>
+        <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+          <Link
+            onClick={() => setOpenBrightSpeak(false)}
+            to="/case-study/brightspeak"
+            className="btn-primary inline-flex justify-center"
+          >
+            View full case study
+          </Link>
+          <Link
+            onClick={() => setOpenBrightSpeak(false)}
+            to="/donate"
+            className="btn-ghost inline-flex justify-center"
+          >
+            Support BrightSen
+          </Link>
+        </div>
       </Modal>
 
       <Modal open={openBrightBuddy} onClose={() => setOpenBrightBuddy(false)}>

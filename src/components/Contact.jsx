@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Contact() {
   return (
     <section
@@ -20,6 +22,17 @@ export default function Contact() {
             <p className="mt-6 text-lg leading-relaxed text-mist">
               App ideas, BrightSpeak feedback, beta testing, educator partnerships
               — I read every message. No pitch deck required.
+            </p>
+            <p className="mt-4 text-mist leading-relaxed">
+              BrightSen stays free for everyone. If BrightSpeak has helped your
+              family, you can{" "}
+              <Link
+                to="/donate"
+                className="font-semibold text-brand-sky underline decoration-brand-sky/30 underline-offset-2 hover:text-frost"
+              >
+                support the app with an optional donation
+              </Link>
+              .
             </p>
             <ul className="mt-8 space-y-3 text-mist">
               <li className="flex gap-3">
@@ -60,6 +73,9 @@ export default function Contact() {
               <a href="mailto:brightsenapps@brightsenapps.com" className="btn-primary justify-center">
                 Email BrightSen
               </a>
+              <Link to="/donate" className="btn-ghost justify-center">
+                Support BrightSen
+              </Link>
               <div className="flex flex-wrap gap-2">
                 <a
                   href="https://www.linkedin.com/in/karl-aboltins-roe-249b0417b"
