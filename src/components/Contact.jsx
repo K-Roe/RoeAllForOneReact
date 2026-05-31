@@ -24,8 +24,7 @@ export default function Contact() {
               — I read every message. No pitch deck required.
             </p>
             <p className="mt-4 text-mist leading-relaxed">
-              BrightSen stays free for everyone. If BrightSpeak has helped your
-              family, you can{" "}
+              BrightSpeak is free for families. If it&apos;s helped yours, you can{" "}
               <Link
                 to="/donate"
                 className="font-semibold text-brand-sky underline decoration-brand-sky/30 underline-offset-2 hover:text-frost"
@@ -55,7 +54,7 @@ export default function Contact() {
                 <span>
                   <strong className="text-frost">Beta &amp; research:</strong> if
                   you work with autistic children and want early access to new
-                  BrightSen apps.
+                  BrightSenApps.
                 </span>
               </li>
             </ul>
@@ -71,10 +70,10 @@ export default function Contact() {
             </p>
             <div className="mt-8 flex flex-col gap-3">
               <a href="mailto:brightsenapps@brightsenapps.com" className="btn-primary justify-center">
-                Email BrightSen
+                Email BrightSenApps
               </a>
               <Link to="/donate" className="btn-ghost justify-center">
-                Support BrightSen
+                Support BrightSpeak
               </Link>
               <div className="flex flex-wrap gap-2">
                 <a

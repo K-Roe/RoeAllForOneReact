@@ -47,7 +47,7 @@ export default function Navbar() {
             loading="lazy"
           />
           <span className="min-w-0 leading-tight">
-            <span className="block truncate text-sm sm:text-base">BrightSen</span>
+            <span className="block truncate text-sm sm:text-base">BrightSenApps</span>
             <span className="hidden text-[11px] font-semibold uppercase tracking-widest text-mist sm:block">
               Apps
             </span>

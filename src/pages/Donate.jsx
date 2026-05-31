@@ -2,12 +2,12 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const STRIPE_DONATE_URL = "https://buy.stripe.com/9B6dRafkIeLIbNlf5ZeZ200";
-const DEFAULT_TITLE = "BrightSen Apps — SEN mobile apps by Karl Roe";
+const DEFAULT_TITLE = "BrightSenApps — SEN mobile apps by Karl Roe";
 
 export default function Donate() {
   useEffect(() => {
     const previous = document.title;
-    document.title = "Support BrightSen — optional donation";
+    document.title = "Support BrightSpeak — optional donation";
     return () => {
       document.title = previous || DEFAULT_TITLE;
     };
@@ -33,14 +33,14 @@ export default function Donate() {
 
         <h1 className="headline mt-6 text-4xl sm:text-5xl lg:text-6xl">
           Help keep{" "}
-          <span className="gradient-text">BrightSen free</span>
-          <span className="text-frost"> for everyone</span>
+          <span className="gradient-text">BrightSpeak free</span>
+          <span className="text-frost"> for families</span>
         </h1>
 
         <p className="mt-6 text-lg leading-relaxed text-mist sm:text-xl">
-          BrightSEN is free for SEN children, parents, and educators — always.
-          It&apos;s independently built to support learning and everyday life
-          without paywalls.
+          BrightSpeak is free for SEN children, parents, and carers. It&apos;s
+          independently built to support communication and everyday life — core
+          features stay open without asking families to pay.
         </p>
         <p className="mt-4 text-lg leading-relaxed text-mist">
           Running and improving the app has real costs. If it&apos;s helped your
@@ -48,7 +48,7 @@ export default function Donate() {
         </p>
         <p className="mt-4 rounded-2xl border border-brand-sky/25 bg-brand-sky/[0.06] px-5 py-4 text-mist leading-relaxed">
           <strong className="text-frost">Donations are optional.</strong> Choosing
-          not to donate will not limit access or features.
+          not to donate will not limit BrightSpeak access or features.
         </p>
 
         <div className="mt-12 grid gap-6 md:grid-cols-3">
@@ -67,13 +67,16 @@ export default function Donate() {
 
           <article className="surface p-6">
             <h2 className="font-display text-lg font-bold text-brand-mint">
-              What stays free
+              Our approach
             </h2>
             <ul className="mt-4 space-y-2 text-sm leading-relaxed text-mist">
-              <li>BrightSpeak and future BrightSen apps</li>
-              <li>No premium tier or paywall</li>
-              <li>No feature gating for non-donors</li>
-              <li>Same experience for every family</li>
+              <li>BrightSpeak core features stay free for families</li>
+              <li>Donations support the app — they&apos;re not a paywall</li>
+              <li>Not donating never locks you out of features</li>
+              <li>
+                Separate licensing for nurseries or schools may be offered later
+                if extra tools are needed — family use won&apos;t depend on that
+              </li>
             </ul>
           </article>
 
@@ -84,18 +87,18 @@ export default function Donate() {
             <ol className="mt-4 list-decimal space-y-2 pl-4 text-sm leading-relaxed text-mist">
               <li>Tap Donate — you&apos;ll open secure Stripe Checkout</li>
               <li>Complete payment on Stripe&apos;s site</li>
-              <li>That&apos;s it — no BrightSen account required here</li>
+              <li>That&apos;s it — no BrightSenApps account required here</li>
             </ol>
           </article>
         </div>
 
         <div className="surface mt-12 p-8 text-center sm:p-10">
           <h2 className="font-display text-2xl font-bold text-frost">
-            Ready to support BrightSen?
+            Ready to support BrightSpeak?
           </h2>
           <p className="mx-auto mt-3 max-w-lg text-mist">
-            Every contribution goes toward keeping apps free and improving them
-            for SEN families and educators.
+            Every contribution goes toward keeping BrightSpeak free for families
+            and improving it for SEN children, parents, and carers.
           </p>
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <a
@@ -113,7 +116,7 @@ export default function Donate() {
             </Link>
           </div>
           <p className="mx-auto mt-6 max-w-md text-xs leading-relaxed text-mist/80">
-            Secure payment processed by Stripe. BrightSen does not store card
+            Secure payment processed by Stripe. BrightSenApps does not store card
             details.
           </p>
         </div>

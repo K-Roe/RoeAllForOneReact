@@ -74,7 +74,7 @@ export default function Projects() {
               to="/donate"
               className="relative mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-sky transition hover:text-frost"
             >
-              Support BrightSen
+              Support BrightSpeak
               <span aria-hidden>→</span>
             </Link>
 
@@ -193,7 +193,7 @@ export default function Projects() {
             to="/donate"
             className="btn-ghost inline-flex justify-center"
           >
-            Support BrightSen
+            Support BrightSpeak
           </Link>
         </div>
       </Modal>

@@ -62,7 +62,7 @@ export default function Hero() {
               I&apos;d want for my own son.
             </p>
             <p className="mt-4 max-w-xl text-sm leading-relaxed text-mist/90">
-              BrightSen exists to make communication and daily life a little
+              BrightSenApps exists to make communication and daily life a little
               easier: visual tools, calm UI, and features shaped by real SEN
               experience — not generic “kid app” templates.
             </p>
