@@ -12,7 +12,7 @@ const team = [
     body: "Karl founded BrightSenApps after seeing first-hand how important accessible communication support can be for children with additional needs. He brings together parent experience, software development, and a practical focus on tools families can actually use.",
   },
   {
-    name: "Joel",
+    name: "Joel Bellis",
     role: "Co-Founder / Project Manager",
     image: joelPhoto,
     alt: "Joel, Co-Founder and Project Manager",
