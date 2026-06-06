@@ -19,8 +19,8 @@ export default {
           soft: "#0c1222",
           card: "#121a2e",
         },
-        mist: "#94a3b8",
-        frost: "#e2e8f0",
+        mist: "#475569",
+        frost: "#0f172a",
         brand: {
           sky: "#38bdf8",
           skyDim: "#0ea5e9",
@@ -33,11 +33,11 @@ export default {
       boxShadow: {
         glow: "0 0 80px -20px rgba(56, 189, 248, 0.45)",
         "glow-warm": "0 0 80px -20px rgba(251, 191, 36, 0.4)",
-        panel: "0 24px 80px -24px rgba(0, 0, 0, 0.65)",
+        panel: "0 24px 70px -32px rgba(15, 23, 42, 0.26)",
       },
       backgroundImage: {
         "grid-fade":
-          "linear-gradient(to right, rgba(148,163,184,0.06) 1px, transparent 1px), linear-gradient(to bottom, rgba(148,163,184,0.06) 1px, transparent 1px)",
+          "linear-gradient(to right, rgba(148,163,184,0.16) 1px, transparent 1px), linear-gradient(to bottom, rgba(148,163,184,0.16) 1px, transparent 1px)",
       },
       animation: {
         "gradient-shift": "gradient-shift 14s ease infinite",

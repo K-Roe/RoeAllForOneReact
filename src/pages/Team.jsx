@@ -53,11 +53,11 @@ export default function Team() {
               className="surface surface-hover grid overflow-hidden md:grid-cols-12 md:items-stretch"
             >
               <div
-                className={`flex bg-white/[0.03] p-4 sm:p-6 md:col-span-5 lg:col-span-4 ${
+                className={`flex bg-slate-50 p-4 sm:p-6 md:col-span-5 lg:col-span-4 ${
                   index % 2 === 1 ? "md:order-2" : ""
                 }`}
               >
-                <div className="flex aspect-[4/5] w-full items-center justify-center overflow-hidden rounded-2xl border border-white/10 bg-ink/40">
+                <div className="flex aspect-[4/5] w-full items-center justify-center overflow-hidden rounded-2xl border border-slate-200 bg-white">
                   <img
                     src={person.image}
                     alt={person.alt}

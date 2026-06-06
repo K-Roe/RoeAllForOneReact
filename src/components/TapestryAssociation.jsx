@@ -10,7 +10,7 @@ const variants = {
     showExtended: false,
   },
   card: {
-    wrap: "mt-4 flex flex-wrap items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.04] px-4 py-3",
+    wrap: "mt-4 flex flex-wrap items-center gap-3 rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3",
     logo: "h-9 w-9 shrink-0 rounded-lg bg-white p-1 object-contain sm:h-10 sm:w-10",
     text: "text-sm leading-snug text-mist",
     showExtended: false,
@@ -66,7 +66,7 @@ export default function TapestryAssociation({
               href={TAPESTRY_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="font-semibold text-frost underline decoration-white/20 underline-offset-2 hover:text-brand-sky"
+              className="font-semibold text-frost underline decoration-slate-300 underline-offset-2 hover:text-brand-sky"
             >
               Tapestry
             </a>

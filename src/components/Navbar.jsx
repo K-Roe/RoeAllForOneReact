@@ -13,7 +13,7 @@ const navItems = [
 
 function navClass({ isActive }) {
   return `rounded-xl px-3 py-2 transition ${
-    isActive ? "bg-white/12 text-frost" : "hover:bg-white/[0.06] hover:text-frost"
+    isActive ? "bg-sky-50 text-frost" : "hover:bg-slate-100 hover:text-frost"
   }`;
 }
 
@@ -22,14 +22,14 @@ export default function Navbar() {
 
   return (
     <header className="fixed left-0 top-0 z-50 w-full px-3 pt-3 sm:px-4 sm:pt-4">
-      <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 rounded-2xl border border-white/[0.08] bg-ink-card/80 px-4 py-3 shadow-panel backdrop-blur-2xl sm:px-6">
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 rounded-2xl border border-slate-200/80 bg-white/90 px-4 py-3 shadow-panel backdrop-blur-2xl sm:px-6">
         <Link
           to="/"
           className="flex min-w-0 items-center gap-3 font-display font-bold text-frost"
           aria-label="BrightSenApps home"
           onClick={() => setOpen(false)}
         >
-          <span className="flex size-11 shrink-0 items-center justify-center rounded-2xl border border-white/15 bg-white p-1 shadow-md">
+          <span className="flex size-11 shrink-0 items-center justify-center rounded-2xl border border-slate-200 bg-white p-1 shadow-md">
             <img
               src={logo}
               className="h-full w-full object-contain"
@@ -80,7 +80,7 @@ export default function Navbar() {
         <button
           type="button"
           onClick={() => setOpen(!open)}
-          className="flex size-11 items-center justify-center rounded-xl border border-white/15 text-frost lg:hidden"
+          className="flex size-11 items-center justify-center rounded-xl border border-slate-200 text-frost lg:hidden"
           aria-expanded={open}
           aria-label={open ? "Close menu" : "Open menu"}
         >
@@ -94,7 +94,7 @@ export default function Navbar() {
 
       {open && (
         <nav
-          className="mx-auto mt-2 flex max-w-7xl flex-col gap-1 rounded-2xl border border-white/10 bg-ink/95 p-4 shadow-panel backdrop-blur-xl lg:hidden"
+          className="mx-auto mt-2 flex max-w-7xl flex-col gap-1 rounded-2xl border border-slate-200/80 bg-white/95 p-4 shadow-panel backdrop-blur-xl lg:hidden"
           aria-label="Mobile navigation"
         >
           {navItems.map((item) =>
@@ -103,7 +103,7 @@ export default function Navbar() {
                 key={item.label}
                 to={item.to}
                 onClick={() => setOpen(false)}
-                className="rounded-xl px-3 py-3 font-semibold text-frost hover:bg-white/[0.06]"
+                className="rounded-xl px-3 py-3 font-semibold text-frost hover:bg-slate-100"
               >
                 {item.label}
               </NavLink>
@@ -112,7 +112,7 @@ export default function Navbar() {
                 key={item.label}
                 href={item.href}
                 onClick={() => setOpen(false)}
-                className="rounded-xl px-3 py-3 font-semibold text-frost hover:bg-white/[0.06]"
+                className="rounded-xl px-3 py-3 font-semibold text-frost hover:bg-slate-100"
               >
                 {item.label}
               </a>

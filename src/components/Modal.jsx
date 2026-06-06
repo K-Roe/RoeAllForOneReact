@@ -9,14 +9,14 @@ export default function Modal({ open, onClose, children }) {
     >
       <button
         type="button"
-        className="absolute inset-0 bg-ink/80 backdrop-blur-md"
+        className="absolute inset-0 bg-slate-900/45 backdrop-blur-md"
         aria-label="Close"
         onClick={onClose}
       />
-      <div className="relative max-h-[90vh] w-full max-w-2xl overflow-y-auto rounded-3xl border border-white/10 bg-ink-card/95 p-8 text-frost shadow-2xl backdrop-blur-xl animate-fade">
+      <div className="relative max-h-[90vh] w-full max-w-2xl overflow-y-auto rounded-3xl border border-slate-200 bg-white/95 p-8 text-frost shadow-2xl backdrop-blur-xl animate-fade">
         <button
           type="button"
-          className="absolute right-4 top-4 rounded-lg px-2 py-1 text-lg text-mist transition hover:bg-white/10 hover:text-frost"
+          className="absolute right-4 top-4 rounded-lg px-2 py-1 text-lg text-mist transition hover:bg-slate-100 hover:text-frost"
           onClick={onClose}
           aria-label="Close dialog"
         >
