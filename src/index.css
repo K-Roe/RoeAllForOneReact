@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Design tokens (mirror tailwind.config.js — avoids @apply + theme edge cases in CSS layers) */
+/* Design tokens mirror tailwind.config.js and avoid @apply plus theme edge cases in CSS layers. */
 @layer base {
   html {
     scroll-behavior: smooth;

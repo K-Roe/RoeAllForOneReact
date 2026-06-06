@@ -1,229 +1,135 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
-import Modal from "./Modal";
-import TapestryAssociation from "./TapestryAssociation";
 import BrightSpeakStoreBadges from "./BrightSpeakStoreBadges";
+import TapestryAssociation from "./TapestryAssociation";
+import { brightSpeakFeatures, testimonials } from "../data/siteContent";
 import { brightSpeakScreenAlts } from "../constants/brightSpeakScreens";
-
 import screen1 from "../assets/brightspeak.jpg";
 import screen2 from "../assets/brightspeak2.jpg";
 import screen3 from "../assets/brightspeak3.jpg";
 import screen4 from "../assets/brightspeak4.jpg";
 
-import bb1 from "../assets/brightbuddy1.png";
-import bb2 from "../assets/brightbuddy2.png";
-import bb3 from "../assets/brightbuddy3.png";
+const screens = [screen1, screen2, screen3, screen4];
 
 export default function Projects() {
-  const [openBrightSpeak, setOpenBrightSpeak] = useState(false);
-  const [openBrightBuddy, setOpenBrightBuddy] = useState(false);
-
   return (
-    <section
-      id="projects"
-      className="relative scroll-mt-28 py-24 text-frost lg:px-20"
-    >
-      <div
-        className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-brand-sky/5 to-transparent"
-        aria-hidden
-      />
+    <>
+      <section
+        id="products"
+        className="relative scroll-mt-28 px-6 py-24 text-frost lg:px-20"
+      >
+        <div
+          className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-brand-sky/5 to-transparent"
+          aria-hidden
+        />
 
-      <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-0">
-        <div className="mb-16 max-w-3xl animate-fade">
-          <span className="eyebrow text-brand-sky">Portfolio</span>
-          <h2 className="headline mt-5 text-4xl sm:text-5xl lg:text-6xl">
-            <span className="gradient-text">SEN mobile apps</span>
-          </h2>
-          <p className="mt-6 text-lg leading-relaxed text-mist">
-            React Native products for families and educators — built with
-            accessibility, calm interaction design, and empathy for how
-            autistic children actually use a phone.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-          <article className="surface surface-hover group relative flex flex-col overflow-hidden p-8">
-            <div className="absolute -right-6 -top-6 size-28 rounded-full bg-brand-sky/15 blur-2xl transition group-hover:bg-brand-sky/25" />
-            <span className="relative mb-4 inline-flex w-fit rounded-full bg-brand-sky/20 px-3 py-1 text-xs font-bold uppercase tracking-wide text-brand-sky">
-              Flagship
-            </span>
-            <h3 className="relative font-display text-2xl font-bold text-frost">
-              BrightSpeak
-            </h3>
-            <p className="relative mt-3 flex-1 text-mist leading-relaxed">
-              Communication support for non-verbal autistic children — visual
-              tools, calm UI, real empathy in the details.
+        <div className="relative z-10 mx-auto max-w-7xl">
+          <div className="mb-14 max-w-3xl animate-fade">
+            <span className="eyebrow text-brand-sky">Our products</span>
+            <h2 className="headline mt-5 text-4xl sm:text-5xl lg:text-6xl">
+              <span className="gradient-text">Bright Speak</span> leads our SEND
+              communication work
+            </h2>
+            <p className="mt-6 text-lg leading-relaxed text-mist">
+              BrightSenApps focuses on accessible educational technology that
+              families, schools, nurseries, and SEND professionals can trust.
             </p>
+          </div>
 
-            <TapestryAssociation variant="card" />
+          <div className="grid grid-cols-1 gap-8 lg:grid-cols-12">
+            <article className="surface surface-hover group relative overflow-hidden p-8 lg:col-span-7">
+              <span className="relative mb-4 inline-flex w-fit rounded-full bg-brand-sky/20 px-3 py-1 text-xs font-bold uppercase tracking-wide text-brand-sky">
+                Flagship app
+              </span>
+              <h3 className="relative font-display text-3xl font-bold text-frost">
+                Bright Speak
+              </h3>
+              <p className="relative mt-4 max-w-2xl text-mist leading-relaxed">
+                A free AAC-style communication and learning app for children who
+                benefit from visual support, including non-verbal children,
+                autistic children, and children with additional learning needs.
+              </p>
 
-            <BrightSpeakStoreBadges className="relative mt-6" />
+              <TapestryAssociation variant="card" />
+              <BrightSpeakStoreBadges className="relative mt-6" />
 
-            <div className="relative mt-6 flex gap-2 overflow-hidden rounded-2xl border border-white/10">
-              {[screen1, screen2, screen3, screen4].map((img, i) => (
-                <img
-                  key={i}
-                  src={img}
-                  alt={brightSpeakScreenAlts[i]}
-                  className="h-32 min-w-0 flex-1 object-cover"
-                />
-              ))}
-            </div>
+              <div className="relative mt-8 grid grid-cols-2 gap-2 sm:grid-cols-4">
+                {screens.map((img, i) => (
+                  <img
+                    key={img}
+                    src={img}
+                    alt={brightSpeakScreenAlts[i]}
+                    className="aspect-[9/16] min-w-0 rounded-2xl border border-white/10 object-cover"
+                    loading="lazy"
+                  />
+                ))}
+              </div>
 
-            <Link
-              to="/donate"
-              className="relative mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-sky transition hover:text-frost"
-            >
-              Support BrightSpeak
-              <span aria-hidden>→</span>
-            </Link>
+              <div className="relative mt-8 flex flex-wrap gap-3">
+                <Link to="/bright-speak" className="btn-primary">
+                  Explore Bright Speak
+                </Link>
+                <Link to="/impact" className="btn-ghost">
+                  See impact
+                </Link>
+              </div>
+            </article>
 
-            <div className="relative mt-4 flex flex-wrap gap-2">
-              <button
-                type="button"
-                onClick={() => setOpenBrightSpeak(true)}
-                className="rounded-xl bg-brand-sky px-4 py-2.5 text-sm font-bold text-ink transition hover:bg-brand-skyDim"
-              >
-                Learn more
-              </button>
-              <Link
-                to="/case-study/brightspeak"
-                className="rounded-xl border border-white/20 px-4 py-2.5 text-sm font-semibold text-frost transition hover:bg-white/[0.06]"
-              >
-                Case study
-              </Link>
-            </div>
-          </article>
+            <aside className="grid gap-8 lg:col-span-5">
+              <article className="surface p-8">
+                <h3 className="font-display text-2xl font-bold text-frost">
+                  What it supports
+                </h3>
+                <ul className="mt-5 grid gap-3 text-sm leading-relaxed text-mist sm:grid-cols-2">
+                  {brightSpeakFeatures.slice(0, 8).map((feature) => (
+                    <li key={feature} className="flex gap-2">
+                      <span className="mt-2 size-2 shrink-0 rounded-full bg-brand-mint" />
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </article>
 
-          <article className="surface surface-hover group relative flex flex-col overflow-hidden p-8">
-            <div className="absolute -right-6 -top-6 size-28 rounded-full bg-brand-coral/15 blur-2xl transition group-hover:bg-brand-coral/25" />
-            <span className="relative mb-4 inline-flex w-fit rounded-full bg-brand-coral/20 px-3 py-1 text-xs font-bold uppercase tracking-wide text-brand-coral">
-              In development
-            </span>
-            <h3 className="relative font-display text-2xl font-bold text-frost">
-              BrightBuddy
-            </h3>
-            <p className="relative mt-3 flex-1 text-mist leading-relaxed">
-              Routine, emotions and confidence — gentle support for autistic
-              children and the adults who care for them.
-            </p>
-
-            <div className="relative mt-6 flex gap-2 overflow-hidden rounded-2xl border border-white/10">
-              {[bb1, bb2, bb3].map((img, i) => (
-                <img
-                  key={i}
-                  src={img}
-                  alt=""
-                  className="h-32 min-w-0 flex-1 object-cover"
-                />
-              ))}
-            </div>
-
-            <div className="relative mt-6 flex flex-wrap gap-2">
-              <button
-                type="button"
-                onClick={() => setOpenBrightBuddy(true)}
-                className="rounded-xl bg-brand-coral px-4 py-2.5 text-sm font-bold text-ink transition hover:brightness-110"
-              >
-                Learn more
-              </button>
-              <Link
-                to="/case-study/brightBuddy"
-                className="rounded-xl border border-white/20 px-4 py-2.5 text-sm font-semibold text-frost transition hover:bg-white/[0.06]"
-              >
-                Case study
-              </Link>
-            </div>
-          </article>
-
-          <article className="surface surface-hover group relative flex flex-col overflow-hidden p-8 md:col-span-2 lg:col-span-1">
-            <div className="absolute -right-6 -top-6 size-28 rounded-full bg-brand-violet/15 blur-2xl transition group-hover:bg-brand-violet/25" />
-            <span className="relative mb-4 inline-flex w-fit rounded-full bg-brand-violet/20 px-3 py-1 text-xs font-bold uppercase tracking-wide text-brand-violet">
-              Coming soon
-            </span>
-            <h3 className="relative font-display text-2xl font-bold text-frost">
-              Next SEN app
-            </h3>
-            <p className="relative mt-3 flex-1 text-mist leading-relaxed">
-              Another supportive, accessibility-led idea is in design. Watch this
-              space — or nudge me if you want to collaborate.
-            </p>
-            <div className="relative mt-6 flex h-36 items-center justify-center rounded-2xl border border-dashed border-white/15 bg-white/[0.03]">
-              <p className="text-sm font-semibold text-mist">Teaser incoming…</p>
-            </div>
-            <a
-              href="#contact"
-              className="relative mt-6 inline-flex w-fit rounded-xl border border-white/20 px-4 py-2.5 text-sm font-semibold text-frost transition hover:bg-white/[0.06]"
-            >
-              Collaborate
-            </a>
-          </article>
+              <article className="surface p-8">
+                <span className="mb-4 inline-flex w-fit rounded-full bg-brand-coral/20 px-3 py-1 text-xs font-bold uppercase tracking-wide text-brand-coral">
+                  In development
+                </span>
+                <h3 className="font-display text-2xl font-bold text-frost">
+                  Future tools
+                </h3>
+                <p className="mt-3 text-mist leading-relaxed">
+                  BrightSenApps is growing beyond one app. New ideas will stay
+                  grounded in calm design, accessibility, family feedback, and
+                  practical support for SEND settings.
+                </p>
+                <Link to="/schools" className="btn-ghost mt-6">
+                  Partner with us
+                </Link>
+              </article>
+            </aside>
+          </div>
         </div>
-      </div>
+      </section>
 
-      <Modal open={openBrightSpeak} onClose={() => setOpenBrightSpeak(false)}>
-        <h2 className="font-display text-2xl font-bold text-brand-sky">
-          BrightSpeak
-        </h2>
-        <p className="mt-3 text-mist leading-relaxed">
-          BrightSpeak helps non-verbal autistic children communicate emotions,
-          needs and thoughts through visual tools, calm UI and supportive design.
-        </p>
-        <TapestryAssociation variant="card" />
-        <div className="mt-6 flex gap-2 overflow-hidden rounded-2xl border border-white/10">
-          {[screen1, screen2, screen3, screen4].map((img, i) => (
-            <img
-              key={i}
-              src={img}
-              alt={brightSpeakScreenAlts[i]}
-              className="h-44 min-w-0 flex-1 object-cover"
-            />
-          ))}
+      <section className="px-6 py-20 text-frost lg:px-20">
+        <div className="mx-auto max-w-7xl">
+          <div className="mb-10 max-w-3xl">
+            <span className="eyebrow text-brand-mint">Impact</span>
+            <h2 className="headline mt-5 text-3xl sm:text-4xl">
+              Built around real communication needs
+            </h2>
+          </div>
+          <div className="grid gap-6 md:grid-cols-3">
+            {testimonials.map((item) => (
+              <blockquote key={item.source} className="surface p-6">
+                <p className="text-mist leading-relaxed">"{item.quote}"</p>
+                <footer className="mt-5 text-sm font-bold text-brand-sky">
+                  {item.source}
+                </footer>
+              </blockquote>
+            ))}
+          </div>
         </div>
-        <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-          <Link
-            onClick={() => setOpenBrightSpeak(false)}
-            to="/case-study/brightspeak"
-            className="btn-primary inline-flex justify-center"
-          >
-            View full case study
-          </Link>
-          <Link
-            onClick={() => setOpenBrightSpeak(false)}
-            to="/donate"
-            className="btn-ghost inline-flex justify-center"
-          >
-            Support BrightSpeak
-          </Link>
-        </div>
-      </Modal>
-
-      <Modal open={openBrightBuddy} onClose={() => setOpenBrightBuddy(false)}>
-        <h2 className="font-display text-2xl font-bold text-brand-coral">
-          BrightBuddy
-        </h2>
-        <p className="mt-3 text-mist leading-relaxed">
-          BrightBuddy helps autistic children feel calmer, more confident and
-          supported using gentle visuals, routine helpers and reassurance tools.
-        </p>
-        <div className="mt-6 flex gap-2 overflow-hidden rounded-2xl border border-white/10">
-          {[bb1, bb2, bb3].map((img, i) => (
-            <img
-              key={i}
-              src={img}
-              alt=""
-              className="h-44 min-w-0 flex-1 object-cover"
-            />
-          ))}
-        </div>
-        <Link
-          onClick={() => setOpenBrightBuddy(false)}
-          to="/case-study/brightBuddy"
-          className="mt-6 inline-block rounded-xl bg-brand-coral px-5 py-3 text-sm font-bold text-ink hover:brightness-110"
-        >
-          View full case study
-        </Link>
-      </Modal>
-    </section>
+      </section>
+    </>
   );
 }

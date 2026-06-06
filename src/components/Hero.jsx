@@ -1,4 +1,6 @@
+import { Link } from "react-router-dom";
 import AndroidPhone from "./AndroidPhone";
+import BrightSpeakStoreBadges from "./BrightSpeakStoreBadges";
 import TapestryAssociation from "./TapestryAssociation";
 import screen1 from "../assets/brightspeak.jpg";
 import screen2 from "../assets/brightspeak2.jpg";
@@ -8,21 +10,9 @@ import logo from "../assets/brightsenapps.png";
 
 export default function Hero() {
   return (
-    <section className="relative isolate min-h-[100dvh] overflow-hidden px-6 pb-24 pt-8 text-frost lg:px-16 lg:pb-28 lg:pt-10">
+    <section className="relative isolate min-h-[92dvh] overflow-hidden px-6 pb-20 pt-8 text-frost lg:px-16 lg:pb-24 lg:pt-10">
       <div
         className="pointer-events-none absolute inset-0 bg-[length:48px_48px] bg-grid-fade opacity-[0.35]"
-        aria-hidden
-      />
-      <div
-        className="pointer-events-none absolute -left-32 top-20 size-[420px] rounded-full bg-brand-sky/25 blur-[100px]"
-        aria-hidden
-      />
-      <div
-        className="pointer-events-none absolute -right-20 bottom-10 size-[380px] rounded-full bg-brand-violet/20 blur-[100px]"
-        aria-hidden
-      />
-      <div
-        className="pointer-events-none absolute left-1/2 top-1/2 size-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-brand-coral/10 blur-[120px]"
         aria-hidden
       />
 
@@ -31,19 +21,17 @@ export default function Hero() {
           <div className="surface inline-flex items-center gap-4 px-4 py-3 pr-6">
             <img
               src={logo}
-              alt="BrightSEN Apps"
+              alt="BrightSenApps"
               className="h-14 w-auto max-w-[9.5rem] object-contain object-left sm:h-16 sm:max-w-[11rem]"
             />
             <div className="hidden h-14 w-px bg-white/15 sm:block sm:h-16" aria-hidden />
             <p className="max-w-xs text-sm leading-snug text-mist">
-              <span className="font-semibold text-frost">Karl Roe</span>
-              <br />
-              SEN-focused mobile apps
+              Free AAC communication and learning support for children with SEND.
             </p>
           </div>
           <div className="flex flex-col items-start gap-2 sm:items-end">
             <div className="eyebrow border-brand-sky/30 bg-brand-sky/[0.08] text-brand-sky">
-              BrightSpeak on Play &amp; App Store
+              Bright Speak is free on iOS and Android
             </div>
             <TapestryAssociation variant="hero" />
           </div>
@@ -52,63 +40,37 @@ export default function Hero() {
         <div className="grid grid-cols-1 items-center gap-14 lg:grid-cols-12 lg:gap-12">
           <div className="lg:col-span-6 animate-fade">
             <h1 className="headline text-4xl leading-[1.05] sm:text-5xl lg:text-6xl xl:text-[3.5rem]">
-              Calm, capable{" "}
-              <span className="gradient-text">mobile apps</span>
-              <span className="text-frost"> for Autism &amp; SEN.</span>
+              Accessible communication tools for{" "}
+              <span className="gradient-text">children with SEND</span>
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-mist">
-              I&apos;m Karl. I build supportive React Native apps for non-verbal
-              and autistic children, families and educators — with the same care
-              I&apos;d want for my own son.
+              BrightSenApps creates friendly digital tools for children with
+              special educational needs, communication difficulties, autism, and
+              additional learning needs.
             </p>
-            <p className="mt-4 max-w-xl text-sm leading-relaxed text-mist/90">
-              BrightSenApps exists to make communication and daily life a little
-              easier: visual tools, calm UI, and features shaped by real SEN
-              experience — not generic “kid app” templates.
+            <p className="mt-4 max-w-xl text-base leading-relaxed text-mist/90">
+              Our flagship app, Bright Speak, helps children communicate needs,
+              feelings, choices, and learning concepts through calm visual
+              supports. It is completely free, has no advertisements, and is
+              shaped by real parent feedback.
             </p>
-
-            <div className="mt-10">
-              <a
-                href="#projects"
-                className="surface surface-hover group relative block overflow-hidden p-6 text-left sm:max-w-md"
-              >
-                <div className="mb-3 flex items-center justify-between gap-3">
-                  <span className="text-xs font-bold uppercase tracking-widest text-brand-sky">
-                    Mobile apps
-                  </span>
-                  <span className="rounded-full bg-brand-sky/15 px-2 py-0.5 text-[10px] font-bold text-brand-sky">
-                    SEN
-                  </span>
-                </div>
-                <p className="text-sm leading-relaxed text-mist">
-                  BrightSpeak, BrightBuddy &amp; thoughtful tools that prioritise
-                  comfort and clarity.
-                </p>
-                <span className="mt-4 inline-flex items-center gap-2 text-sm font-bold text-frost group-hover:text-brand-sky">
-                  View app work
-                  <span aria-hidden>→</span>
-                </span>
-                <div
-                  className="pointer-events-none absolute -right-8 -top-8 size-32 rounded-full bg-brand-sky/10 blur-2xl transition group-hover:bg-brand-sky/20"
-                  aria-hidden
-                />
-              </a>
-            </div>
 
             <div className="mt-8 flex flex-wrap gap-3">
-              <a href="#projects" className="btn-primary">
-                Explore apps
-              </a>
+              <Link to="/bright-speak" className="btn-primary">
+                Learn about Bright Speak
+              </Link>
               <a href="#contact" className="btn-ghost">
-                Feedback &amp; collaboration
+                Contact us
               </a>
             </div>
+
+            <BrightSpeakStoreBadges className="mt-8" />
           </div>
 
           <div className="relative flex justify-center lg:col-span-6 lg:justify-end">
             <div className="relative w-fit animate-float">
               <span className="absolute -left-2 top-6 z-10 rounded-full bg-brand-sky/90 px-3 py-1 text-[11px] font-bold uppercase tracking-wide text-ink shadow-lg">
-                Apps
+                Bright Speak
               </span>
               <AndroidPhone
                 images={[screen1, screen2, screen3, screen4]}

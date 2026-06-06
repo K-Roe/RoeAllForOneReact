@@ -4,10 +4,16 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
+import SEO from "./components/SEO";
 import CaseStudyBrightSpeak from "./pages/CaseStudyBrightSpeak";
 import CaseStudyBrightBuddy from "./pages/CaseStudyBrightBuddy";
 import Donate from "./pages/Donate";
 import About from "./pages/About";
+import BrightSpeak from "./pages/BrightSpeak";
+import Impact from "./pages/Impact";
+import Schools from "./pages/Schools";
+import Team from "./pages/Team";
+import { organisationSchema } from "./data/siteContent";
 
 export default function App() {
   return (
@@ -21,6 +27,12 @@ export default function App() {
             path="/"
             element={
               <>
+                <SEO
+                  title="BrightSenApps | Free SEND communication tools for children"
+                  description="BrightSenApps creates accessible digital tools for children with SEND, autism, communication difficulties, and additional learning needs. Download Bright Speak for free."
+                  path="/"
+                  schema={organisationSchema}
+                />
                 <Hero />
                 <Projects />
                 <Contact />
@@ -28,6 +40,10 @@ export default function App() {
             }
           />
 
+          <Route path="/bright-speak" element={<BrightSpeak />} />
+          <Route path="/impact" element={<Impact />} />
+          <Route path="/schools" element={<Schools />} />
+          <Route path="/team" element={<Team />} />
           <Route
             path="/case-study/brightspeak"
             element={<CaseStudyBrightSpeak />}

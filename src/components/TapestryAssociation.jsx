@@ -51,7 +51,7 @@ export default function TapestryAssociation({
           target="_blank"
           rel="noopener noreferrer"
           className="shrink-0 transition hover:opacity-90"
-          aria-label="Tapestry — early years platform (opens in new tab)"
+          aria-label="Tapestry, early years platform (opens in new tab)"
         >
           {logo}
         </a>
@@ -76,8 +76,8 @@ export default function TapestryAssociation({
         </p>
         {v.showExtended && (
           <p className="mt-2 text-sm leading-relaxed text-mist/90">
-            BrightSpeak connects families with the early years settings they
-            already trust — bringing calm, visual communication support alongside
+            Bright Speak connects families with the early years settings they
+            already trust, bringing calm visual communication support alongside
             Tapestry&apos;s nursery and school workflows.
           </p>
         )}

@@ -20,7 +20,7 @@ export default function Modal({ open, onClose, children }) {
           onClick={onClose}
           aria-label="Close dialog"
         >
-          ✕
+          x
         </button>
         <div className="pr-6">{children}</div>
       </div>

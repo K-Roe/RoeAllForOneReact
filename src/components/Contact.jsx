@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { contactEmail } from "../data/siteContent";
 
 export default function Contact() {
   return (
@@ -16,82 +17,46 @@ export default function Contact() {
           <div>
             <span className="eyebrow">Contact</span>
             <h2 className="headline mt-5 text-4xl sm:text-5xl lg:text-6xl">
-              Tell me what you&apos;re{" "}
-              <span className="gradient-text">building next</span>
+              Talk to BrightSenApps
             </h2>
             <p className="mt-6 text-lg leading-relaxed text-mist">
-              App ideas, BrightSpeak feedback, beta testing, educator partnerships
-              — I read every message. No pitch deck required.
+              We welcome messages from parents, carers, schools, nurseries,
+              speech and language professionals, SENCOs, funders, and charitable
+              partners.
             </p>
-            <p className="mt-4 text-mist leading-relaxed">
-              BrightSpeak is free for families. If it&apos;s helped yours, you can{" "}
-              <Link
-                to="/donate"
-                className="font-semibold text-brand-sky underline decoration-brand-sky/30 underline-offset-2 hover:text-frost"
-              >
-                support the app with an optional donation
-              </Link>
-              .
-            </p>
-            <ul className="mt-8 space-y-3 text-mist">
-              <li className="flex gap-3">
-                <span className="mt-1 font-bold text-brand-sky">①</span>
-                <span>
-                  <strong className="text-frost">BrightSpeak users:</strong> what
-                  helps, what&apos;s confusing, and what you&apos;d love to see
-                  next — parents, carers and teachers welcome.
-                </span>
-              </li>
-              <li className="flex gap-3">
-                <span className="mt-1 font-bold text-brand-coral">②</span>
-                <span>
-                  <strong className="text-frost">SEN collaboration:</strong> who
-                  the product helps and what problem you&apos;re solving together.
-                </span>
-              </li>
-              <li className="flex gap-3">
-                <span className="mt-1 font-bold text-brand-violet">③</span>
-                <span>
-                  <strong className="text-frost">Beta &amp; research:</strong> if
-                  you work with autistic children and want early access to new
-                  BrightSenApps.
-                </span>
-              </li>
+            <ul className="mt-8 space-y-4 text-mist">
+              {[
+                "Bright Speak feedback from families and professionals",
+                "School and nursery pilot opportunities",
+                "Partnerships, funding, and accessibility collaboration",
+              ].map((item) => (
+                <li key={item} className="flex gap-3">
+                  <span className="mt-2 size-2.5 shrink-0 rounded-full bg-brand-sky" />
+                  <span>{item}</span>
+                </li>
+              ))}
             </ul>
           </div>
 
           <div className="surface p-8 sm:p-10">
             <p className="text-sm font-bold uppercase tracking-widest text-mist">
-              Direct lines
+              Direct contact
             </p>
             <p className="mt-4 text-mist leading-relaxed">
-              Prefer email? That&apos;s the best place to start — I&apos;ll
-              follow up with clear next steps.
+              Email is the best starting point. Tell us who you support, what you
+              are trying to solve, and how BrightSenApps might help.
             </p>
             <div className="mt-8 flex flex-col gap-3">
-              <a href="mailto:brightsenapps@brightsenapps.com" className="btn-primary justify-center">
+              <a href={`mailto:${contactEmail}`} className="btn-primary justify-center">
                 Email BrightSenApps
               </a>
+              <Link to="/schools" className="btn-ghost justify-center">
+                Schools and organisations
+              </Link>
               <Link to="/donate" className="btn-ghost justify-center">
-                Support BrightSpeak
+                Support Bright Speak
               </Link>
               <div className="flex flex-wrap gap-2">
-                <a
-                  href="https://www.linkedin.com/in/karl-aboltins-roe-249b0417b"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-ghost flex-1 min-w-[140px]"
-                >
-                  LinkedIn
-                </a>
-                <a
-                  href="https://github.com/K-Roe"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-ghost flex-1 min-w-[140px]"
-                >
-                  GitHub
-                </a>
                 <a
                   href="https://www.instagram.com/brightsenapps/"
                   target="_blank"
@@ -100,10 +65,19 @@ export default function Contact() {
                 >
                   Instagram
                 </a>
+                <a
+                  href="https://www.linkedin.com/in/karl-aboltins-roe-249b0417b"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-ghost flex-1 min-w-[140px]"
+                >
+                  LinkedIn
+                </a>
               </div>
             </div>
             <p className="mt-8 border-t border-white/10 pt-6 text-center text-sm text-mist">
-              Based in the UK · Building for families everywhere
+              Based in the UK. Building accessible tools for families and
+              education settings.
             </p>
           </div>
         </div>

@@ -1,8 +1,8 @@
 export const brightSpeakScreenAlts = [
-  "BrightSpeak app — main communication home screen",
-  "BrightSpeak app — visual communication choices",
-  "BrightSpeak app — calm, accessible interaction screen",
-  "BrightSpeak app — supportive communication flow",
+  "Bright Speak app main communication home screen",
+  "Bright Speak app visual communication choices",
+  "Bright Speak app calm accessible interaction screen",
+  "Bright Speak app supportive communication flow",
 ];
 
 export const brightSpeakStoreLinks = {
