@@ -78,6 +78,16 @@ export default function Navbar() {
                 Contact
               </a>
               <Link
+                to="/about"
+                className={`rounded-xl px-3 py-2 transition ${
+                  location.pathname === "/about"
+                    ? "bg-white/12 text-frost"
+                    : "hover:bg-white/[0.06] hover:text-frost"
+                }`}
+              >
+                About
+              </Link>
+              <Link
                 to="/donate"
                 className="rounded-xl px-3 py-2 transition hover:bg-white/[0.06] hover:text-frost"
               >
@@ -172,6 +182,13 @@ export default function Navbar() {
           >
             Contact
           </a>
+          <Link
+            to="/about"
+            onClick={() => setOpen(false)}
+            className="rounded-xl px-3 py-3 font-semibold text-frost hover:bg-white/[0.06]"
+          >
+            About
+          </Link>
           <Link
             to="/donate"
             onClick={() => setOpen(false)}
