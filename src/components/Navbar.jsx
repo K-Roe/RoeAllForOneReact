@@ -6,6 +6,7 @@ const navItems = [
   { label: "Bright Speak", to: "/bright-speak" },
   { label: "About", to: "/about" },
   { label: "Team", to: "/team" },
+  { label: "Updates", to: "/updates" },
   { label: "Impact", to: "/impact" },
   { label: "Schools", to: "/schools" },
   { label: "Contact", href: "/#contact" },

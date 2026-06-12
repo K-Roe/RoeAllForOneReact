@@ -6,13 +6,13 @@ import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import SEO from "./components/SEO";
 import CaseStudyBrightSpeak from "./pages/CaseStudyBrightSpeak";
-import CaseStudyBrightBuddy from "./pages/CaseStudyBrightBuddy";
 import Donate from "./pages/Donate";
 import About from "./pages/About";
 import BrightSpeak from "./pages/BrightSpeak";
 import Impact from "./pages/Impact";
 import Schools from "./pages/Schools";
 import Team from "./pages/Team";
+import Updates from "./pages/Updates";
 import { organisationSchema } from "./data/siteContent";
 
 export default function App() {
@@ -44,13 +44,10 @@ export default function App() {
           <Route path="/impact" element={<Impact />} />
           <Route path="/schools" element={<Schools />} />
           <Route path="/team" element={<Team />} />
+          <Route path="/updates" element={<Updates />} />
           <Route
             path="/case-study/brightspeak"
             element={<CaseStudyBrightSpeak />}
-          />
-          <Route
-            path="/case-study/brightBuddy"
-            element={<CaseStudyBrightBuddy />}
           />
           <Route path="/donate" element={<Donate />} />
           <Route path="/about" element={<About />} />
