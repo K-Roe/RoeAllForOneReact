@@ -38,7 +38,7 @@ const timeline = [
     changes: [
       "Universal Colour Accessibility Mode",
       "Child added to the People Mini Game",
-      "Improved audio playback in silent mode",
+      "Improved audio playback",
       "Correct and incorrect feedback prompts",
       "Reduced repeated answers in activities",
       "Bug fixes and performance improvements",

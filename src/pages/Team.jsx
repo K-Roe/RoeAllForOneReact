@@ -1,11 +1,12 @@
 import SEO from "../components/SEO";
 import karlPhoto from "../assets/Karl.jpg";
 import joelPhoto from "../assets/Joel.png";
+import alexPhoto from "../assets/Alex.jpg";
 
 const team = [
   {
     name: "Karl Aboltins-Roe",
-    role: "Founder",
+    role: "Founder / Lead Developer",
     image: karlPhoto,
     alt: "Karl Aboltins-Roe",
     email: "karlaboltins-roe@brightsenapps.com",
@@ -13,11 +14,19 @@ const team = [
   },
   {
     name: "Joel Bellis",
-    role: "Co-Founder / Project Manager",
+    role: "Co-Founder / Operations Director",
     image: joelPhoto,
-    alt: "Joel, Co-Founder and Project Manager",
+    alt: "Joel, Co-Founder and Operations Director",
     email: "joelbellis@brightsenapps.com",
     body: "Joel supports product direction, project planning, delivery, and long-term growth. His role helps BrightSenApps stay organised, purposeful, and focused on the needs of families, schools, and partner organisations.",
+  },
+  {
+    name: "Alex Blake",
+    role: "Head of Backend Development",
+    image: alexPhoto,
+    alt: "Alex Blake, Head of Backend Development",
+    email: "alexblake@brightsenapps.com",
+    body: "Alex supports the development of BrightSenApps with a focus on backend systems, Laravel development, database structure, and platform reliability. His work helps strengthen the technical foundations behind Bright Speak and future BrightSenApps projects.",
   },
 ];
 
